@@ -8,7 +8,6 @@ Use this repository to create a new Ximera project by clicking the "Use This Tem
 - Select your repo
 - All done
 
-- 
 <img width="1489" height="776" alt="image" src="https://github.com/user-attachments/assets/335457e0-2f7c-42be-bfa1-3db798d690d8" />
 
 The key files for Ximera deployment are: 
