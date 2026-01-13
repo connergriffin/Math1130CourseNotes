@@ -1,0 +1,64 @@
+\begin{question}
+Solve for \(x:\) \(x^2+6x+8=0.\)
+\begin{expandable}{}{}
+\begin{solution}
+    Consider that \(\left(x+a\right)\left(x+b\right) = x^2+\left(a+b\right)x +ab.\)
+    Our goal is to find \(a\) and \(b.\)
+    We should first list the ways we can factor \(8\) as a product of a pair of integers.
+    \[8 = 8\cdot 1 \quad \textrm{or} \quad \left(-8\right)\left(-1\right) \quad \textrm{or} \quad 4\cdot 2 \quad \textrm{or} \quad \left(-4\right)\left(-2\right)\]
+    We then sum these factors. Whichever pair sums to \(6\) will be our \(a\) and \(b.\)
+    \[8+1 =9 \quad -8-1=-9 \quad 4+2=6 \checkmark.\]
+    Thus the left hand side (LHS) factors as \( \left(x+4\right)\left(x+2\right) \) and our equation can also be written
+    \[\left(x+4\right)\left(x+2\right)  = 0.\]
+    Recall that if \(a\cdot b =0\) then \(a =0\) or \(b=0.\)
+    In our case this means that
+    \[x+4=0 \quad \textrm{or} \quad x+2=0.\]
+    Thus \(-4\) and \(-2\) are the solutions to our quadratic equation.
+
+    The set of solutions to our quadratic equation is \(\{-4,-2\}.\)
+\end{solution}
+\end{expandable}
+\end{question}
+
+\begin{question}
+Solve for \(x:\) \(\left(y-2\right)\left(y+3\right) =6.\)
+
+\textbf{Tip:} Note that this is not already appropriately factored. In the previous question, we relied on the fact that if \(ab=0\) then \(a=0\) or \(b=0.\) The same is not true for \(ab=6.\) We must first rewrite the equation in the form \(x^2+bx+c=0.\) It should be your habit to always start these problems by rearranging the equation into this ``standard form''.
+\begin{expandable}{}{}
+    \begin{solution}
+        \begin{gather*}
+            \left(y-2\right)\left(y-3\right)=6 \\
+            y^2 -2y+3y -6 =6 \\
+            y^2 -y -12 =0
+        \end{gather*}
+        Now that it is in the standard form, we apply the factoring technique from above to get
+        \[\left(y+3\right)\left(y-4\right)=0.\]
+
+        The set of solutions to our quadratic equation is \(\{-3,4\}.\)
+    \end{solution}
+\end{expandable}
+\end{question}
+
+\begin{question}
+    Solve for \(t:\) \(4t^3+t^2 -4t-1 =0.\)
+\begin{expandable}{}{}
+    \begin{solution}
+        This is \emph{not} a quadratic equation since there is a \(t^3\) term. However, this is a special kind of higher degree polynomial equation that is simple to factor.
+
+        \begin{gather*}
+            4t^3+t^2 -4t-1 =0 \\
+            t^2\left(4t+1\right)-\left(4t+1\right) =0\\
+            \left(t^2-1\right)\left(4t+1\right)=0
+        \end{gather*}
+
+        Hence, \(4t+1 =0\) -- in which case, \(t=-\frac{1}{4}\) -- or \(t^2-1=0.\) Polynomials of the form \(t^2-a^2\) can always be factored as \(\left(t-a\right)\left(t+a\right).\) This is called the ``difference of squares formula.'' Remember it! Thus from the quadratic equation we have
+        \begin{gather*}
+            t^2-1=0 \\
+            \left(t+1\right)\left(t-1\right) =0.
+        \end{gather*}
+        Therefore, \(-1\) and \(1\) are solutions.
+        
+        The complete set of solutions to our equation is \(\{-1,-\frac{1}{4},1\}.\)
+    \end{solution}
+\end{expandable}
+\end{question}
