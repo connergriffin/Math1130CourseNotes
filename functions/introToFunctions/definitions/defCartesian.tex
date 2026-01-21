@@ -1,0 +1,37 @@
+Sets are the foundational object of mathematics and hence we do not give them any qualities that are not needed for them to serve as a foundation. In particular, sets are unordered. As a specific example, the set \(\{1,2\}\) is the same set as \(\{2,1\}.\) Of course, ordering a set is important. When we give a two-element set an order it is called an ordered pair.
+
+\begin{definition}
+    For any \(a\) and \(b\), the ordered pair \(\left(a,b\right)\) is the set \(\{a,b\}\) with an ordering of it's elements. As a matter of convention, we say that \(a\) is in the first position (or coordinate) and \(b\) is in the second position (or coordinate.)
+\end{definition}
+
+At a technical level, we have to define everything from sets -- though for practical reasons we rarely deal with these definitions. For the ordered pair \(\left(a,b\right)\), we can define it from sets by \(\left(a,b\right)= \{ \{a\},\{a,b\} \}.\) In this definition, \(\{a,b\}\) is the set to be ordered and \(\{a\}\) is the object which comes first in the order. This definition comes from the Polish mathematician Kazimierz Kuratowski in his 1921 paper ``Sur la notion de l'ordre dans la Theorie des Ensemble,'' and is the appropriate definition in most contexts.
+
+It is the case that \(\left(a,b\right) = \left(x,y\right)\) is equivalent to \(a=x\) and \(b=y.\) Continuing with the first example, \(\left(1,2\right) \ne \left(2,1\right)\) as \(1\ne 2.\)
+
+\begin{definition}
+    Let \(X\) and \(Y\) be a set. The \emph{cartesian product} of \(X\) and \(Y\) is the set of all ordered pairs \(\left(x,y\right)\) where \(x\) comes from \(X\) and \(y\) comes from \(Y.\) It is denoted \(X \times Y.\)
+\end{definition}
+
+We visualize the cartesian product \(\left(-\infty,\infty\right) \times \left(-\infty,\infty\right)\) as the usual \(xy\)-plane with the \(x\)-axis being the first coordinate and the \(y\)-axis the second coordinate.
+
+\begin{image}
+\begin{tikzpicture}
+    \draw[<->] (0,-0.2) --(0,4.2);
+    \draw[<->] (-0.2, 0) -- (6.2, 0);
+
+    \foreach \x in {1,2,3,4}{
+        \draw (-0.1,\x) -- (0.1, \x);
+        \node[left] at (-0.1,\x) {$\x$};
+    }
+    \foreach \x in {1, 2, 3, 4,5,6} {
+        \draw (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {$\x$};
+    }
+    \draw[blue, very thick] (0,0) -- (0,3.5);
+    \draw[orange!60, very thick] (0,0) -- (6,0);
+    \draw[dashed,blue, very thick] (6,0) -- (6,3.5);
+    \draw[dashed,orange!60, very thick] (0,3.5) -- (6,3.5);
+    \filldraw[black] (6,3.5) circle (2pt) node[anchor=west]{$(6,3.5)$};
+    \end{tikzpicture}
+    %\caption{The point \(\left(6,3.5\right)\) plotted on the \(xy\)-plane.}
+\end{image}

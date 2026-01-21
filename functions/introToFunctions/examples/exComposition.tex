@@ -1,0 +1,29 @@
+\begin{question}
+    Define \(f\left(x\right) =x^2-3x+2\)
+    Find \(f\left(x+h\right)\) and simplify.
+    \begin{solution}
+        \begin{gather*}
+            f(x+h) = (x + h)^2 - 3(x + h) + 2\\
+            = x^2 + 2xh + h^2 - 3x - 3h +2
+        \end{gather*}
+    \end{solution}
+\end{question}
+Given a function \(f\left(x\right)\) the \emph{difference quotient at} \(x\) is \(\frac{f(x+h)-f(x)}{h}.\)
+\begin{question}
+    Define \(g\left(x\right) =x^2\)
+    Find \(\frac{f\left(x+h\right)-f(x)}{h}\) and simplify.
+    \begin{solution}
+        We start by simplifying the numerator. Recall the difference of squares formula: \(x^2-a^2 = (x-a)(x+a).\)
+        \begin{gather*}
+            f(x+h)-f(x) = (x + h)^2 - x^2\\
+            = (x+h-x)(x+h+x) \quad \textrm{(difference of squares)}\\
+            =h(2x+h)
+        \end{gather*}
+        Thus we have
+        \begin{gather*}
+            \frac{f(x+h)-f(x)}{h} = \frac{h(2x+h)}{h} \\
+            =2x+h \ \textrm{if} \ h\ne 0.
+        \end{gather*}
+        If \(h =0\) then the difference quotient is not defined since we have division by zero. However, the simplified answer is defined at zero. We cannot allow zero to be in its domain since the function we are simplifying is not defined there.
+    \end{solution}
+\end{question}

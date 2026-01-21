@@ -1,0 +1,69 @@
+We can define functions from sets. A function from \(X\) to \(Y\) is a subset of the cartesian product \(X \times Y\) such that 
+\begin{enumerate}
+    \item for all \(x\) in \(X\) there is a \(y\) in \(Y\) such that \(\left(x,y\right)\) belongs to the function, and
+    \item if both \(\left(x,y\right)\) and \(\left(x,z\right)\) belong to the function then \(y=z.\)
+\end{enumerate}
+
+It can be difficult to understand what is useful about functions from this definition. In this course, we will take a more casual natural language definition of a function.
+
+\begin{definition}
+    A function -- which we will call \(f\) -- from a set \(X\) to a set \(Y\) is a rule that assigns to each \(x\) in \(X\) exactly one element of \(Y.\) The element of \(Y\) which is assigned to \(x\) is denoted \(f\left(x\right).\) The set \(X\) is called the domain and the subset of \(Y\) consisting of all \(f\left(x\right)\) is called the range of \(f.\)
+\end{definition}
+
+In this course, the names for functions will be one of the following \(f,g,h,F,G, \) or \( H.\) In the case of an applied problem, it may be that the name of the function comes from that which it is modeling. For example, \(R\) for revenue. Revenue is usually dependent on the quantity that is produced and thus it is a function of \(q.\) That is for each quantity of product \(q\) there is a unique amount of revenue that is made from selling that quantity.
+
+All of the functions considered in this course can be defined by an expression containing a single variable. For example, to each real number \(x\) we can assign the unique value \(f(x)=x^2+1.\)
+
+We can evaluate this function at any value of \(x.\)
+
+\begin{gather*}
+    f(-1) = (-1)^2+1 = 2 \\
+    f(0) = 0^2+1=1 \\
+    f(10.5) = (10.5)^2+1 = 110.25+1 =111.25
+\end{gather*}
+
+We can also evaluate it at other expressions.
+
+\begin{gather*}
+    f(u) = u^2+1 \\
+    f(x^2+1) = (x^2+1)^2+1 = x^4+2x^2+2
+\end{gather*}
+
+As a set of ordered pairs, it is the set of all \(\left(x,x^2+1\right).\) We can approximately plot all of these ordered pairs on the \(xy\)-plane.
+
+\[\graph{x^2+1}\]
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+  xmin=-2.4,
+  xmax=2.4,
+  ymin=-1.2,
+  ymax=4.2,
+  axis lines=center,
+  xlabel=$x$,
+  ylabel=$y$,
+  every axis y label/.style=
+    {at=(current axis.above origin),anchor=south},
+  every axis x label/.style=
+    {at=(current axis.right of origin),anchor=west},
+  ]
+\addplot [very thick, blue, smooth, samples=100] {x^2+1};
+\addplot[dashed, domain = 0:1]{2};
+\addplot[dashed] coordinates {(1,0) (1,2)};
+\addplot[mark=*] coordinates {(1,2)};
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+One of the key tasks of this section will be determining the domain of a function which is defined by some expression. To get the domain of a function, we start with the set of all real numbers and throw out only those values which result in division by zero or the square root of a negative when plugged into our function.
+
+For example, if \(f\left(x\right) = \frac{1}{x-3}.\) Then the domain is all \(x\) such that \(x-3\ne0.\) That is the domain is all \(x\) such that \(x \ne 3.\) Our notation for this set will be \(\left(-\infty,\infty\right) - \{3\}.\) We are using the minus sign here to say that we are removing \(3\) from the set of all real numbers. 
+
+As another example \(g\left(x\right) = \sqrt{x-4}.\) We need that \(x-4 \ge 0.\) So the domain is \(\left[4,\infty\right).\)
+
+We will also be determining the range of functions.
+
+For \(f,\) assume that \(y=\frac{1}{x-3}.\) Solving for \(x\) we get \(x = \frac{1}{y}+3.\) Then if this \(x\) value is plugged into \(f\) the output is \(y.\) The only \(y\) value that does not produce an \(x\) is \(y=0\) since this would give us division by \(0.\) The range of \(f\) is then \(\left(-\infty,\infty\right) - \{0\}.\)
+
+For \(g,\) we know that \(\sqrt{x-4} \ge 0\) since the range of \(\sqrt{x}\) is all nonnegative numbers. Suppose \(y = \sqrt{x-4}\) then \(x = y^2 +4.\) We know \(y\ge0\). No further restrictions need to be made since the domain of \(y^2+4\) is all real numbers. Thus the range is \(\left[0,\infty\right).\)
