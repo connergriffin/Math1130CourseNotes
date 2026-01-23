@@ -2,7 +2,7 @@ Define
 \[f(x) = \begin{cases}
 x+1 & \textrm{if} \ -2 \le x \le 0 \\
 1 & \textrm{if} \ 0<x\le2 \\
--x+3 & \textrm{if} \ 2<x\le 4
+-x+3 & \textrm{if} \ 2<x\le 4.
 \end{cases}\]
 
 This is called a \emph{case defined function.} How you evaluate the function at \(x\) depends on which rule that \(x\) value satisfies. In the case of \(f,\) the rules are \(-2 \le x \le 0,\) \(0 < x \le 2,\) and \(2 < x \le 4.\) Note that these rules are mutually exclusive meaning there are no \(x\) values that satisfy more than one rule.
@@ -17,3 +17,13 @@ Let's evaluate \(f\) at a few points.
     x=1, \ \textrm{since} \ 0 < 1 \le 2 \ \textrm{this} \ x \ \textrm{value satisfies the second rule.} \\ f(1) = 1 \\
     x=3, \ \textrm{since} \ 2 < 3 \le 4 \ \textrm{this} \ x \ \textrm{value satisfies the third rule.} \\ f(3) = -3+3 = 0
 \end{gather*}
+
+\begin{example}
+    One of the most important case defined functions is the \emph{absolute value function.}
+    \[\left|x\right| = \begin{cases}
+        x & \textrm{if} \ x\ge0 \\
+        -x & \textrm{if} \ x<0
+    \end{cases}\]
+    It takes a real number input and returns its \emph{distance from zero.} For example, \(\left|2\right| = 2\) and \(\left|-13\right|=13.\)
+    It does not have to be case defined though! In fact, \(\left|x\right| = \sqrt{x^2}\) for all real numbers \(x.\) This is an important identity and should be remembered.
+\end{example}
