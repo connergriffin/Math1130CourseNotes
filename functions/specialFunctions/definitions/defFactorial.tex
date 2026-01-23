@@ -1,0 +1,39 @@
+\begin{definition}
+    For \(n,\) a positive integer, define \(n! = 1\cdot 2 \cdot \dots \cdot n\) that is \(n!\) is the product of the first \(n\) positive integers. Define \(0! = 1.\) The symbol \(n!\) is read ``\(n\) factorial.''
+\end{definition}
+
+The factorial is a function from the nonnegative integers to the nonnegative integers. It is vitally important in probability especially in cases where there are a finite number of outcomes. This is due to the fact that \(n!\) is exactly the number of ways that one can order a set of size \(n.\)
+
+\begin{example}
+    Simplify \(\frac{72!}{71!}.\)
+    \begin{solution}
+        \begin{gather*}
+            \frac{72!}{71!} = \frac{1\cdot 2 \cdot 3 \cdot \dots \cdot 70 \cdot 71 \cdot 72}{1\cdot 2 \cdot 3 \cdot \dots \cdot 70 \cdot 71} \\
+            = \frac{\not 1\cdot  \not 2 \cdot \not 3 \cdot \dots \cdot \not{70} \cdot \not{71} \cdot 72}{\not 1\cdot \not 2 \cdot \not3 \cdot \dots \cdot \not{70} \cdot \not{71}}
+        \end{gather*}
+        Since everything except the \(72\) in the numerator canceled, this fraction simplifies to \(72.\) It is not too hard to see that \(\frac{\left(n+1\right)!}{n!} = n+1\) for any nonnegative integer \(n.\)
+    \end{solution}
+\end{example}
+
+\begin{example}
+    On a baseball team there are \(9\) batters in the lineup. How many different batting orders are there?
+    \begin{solution}
+        The batters for the team form a set of size \(9.\) How many ways can we order a set of size \(9?\) Exactly \(9!.\)
+        \[9! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdot 7 \cdot 8 \cdot 9 = 362,880.\]
+    \end{solution}
+\end{example}
+
+\begin{question}
+    Calculate each of the following. It is recommended that you do this without a calculator.
+
+    \begin{enumerate}
+        \item \(1! = \answer{1}\)
+        \item \(2! = \answer{2}\)
+        \item \(3! = \answer{6}\)
+        \item \(4! = \answer{24}\)
+        \item \(5! = \answer{120}\)
+        \item \(6! = \answer{720}\)
+        \item \(\frac{36!}{35!} = \answer{36}\)
+        \item \(\frac{12!}{10!(2!)} = \answer{66}\)
+    \end{enumerate}
+\end{question}
