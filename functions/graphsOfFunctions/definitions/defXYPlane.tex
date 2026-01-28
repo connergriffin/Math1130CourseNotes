@@ -1,0 +1,23 @@
+As was mentioned in Section 2.1, formally functions from the real line to the real line are subsets of the cartesian product \(\left(-\infty,\infty\right) \times \left(-\infty,\infty\right)\) which satisfy specific conditions. We can visualize the cartesian product as the \(xy\)-coordinate plane. Generally, the point of intersection for the \(x\)- and \(y\)-axes is taken to be the point \(\left(0,0\right)\) which we call the origin. If we would like to \emph{plot} an ordered pair say, \(\left(6,3.5\right),\) then a mark is made \(6\) units horizontally and \(3.5\) units vertically.
+
+\begin{image}
+\begin{tikzpicture}
+    \draw[<->] (0,-0.2) --(0,4.2);
+    \draw[<->] (-0.2, 0) -- (6.2, 0);
+
+    \foreach \x in {1,2,3,4}{
+        \draw (-0.1,\x) -- (0.1, \x);
+        \node[left] at (-0.1,\x) {$\x$};
+    }
+    \foreach \x in {1, 2, 3, 4,5,6} {
+        \draw (\x, -0.1) -- (\x, 0.1);
+        \node[below] at (\x, -0.1) {$\x$};
+    }
+    \draw[blue, very thick] (0,0) -- (0,3.5);
+    \draw[orange!60, very thick] (0,0) -- (6,0);
+    \draw[dashed,blue, very thick] (6,0) -- (6,3.5);
+    \draw[dashed,orange!60, very thick] (0,3.5) -- (6,3.5);
+    \filldraw[black] (6,3.5) circle (2pt) node[anchor=west]{$(6,3.5)$};
+    \end{tikzpicture}
+    %\caption{The point \(\left(6,3.5\right)\) plotted on the \(xy\)-plane.}
+\end{image}
