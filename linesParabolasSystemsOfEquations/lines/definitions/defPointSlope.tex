@@ -1,0 +1,65 @@
+The straight line between any two points, \((x_0,y_0)\) and \((x_1,y_1)\) is given by the equation \[(x-x_1)(y_0-y_1) = (y-y_1)(x_0-x_1).\]
+
+Each of the two points satisfies this equation. Indeed, if we plug in \((x_0,y_0)\) we see that
+
+\begin{gather*}
+    (x_0-x_1)(y_0-y_1) = (y_0-y_1)(x_0-x_1).
+\end{gather*}
+
+And if we plug in \((x_1,y_1),\) we get
+
+\begin{gather*}
+    (x_1-x_1)(y_0-y_1) = (y_1-y_1)(x_0-x_1) \\
+    0=0.
+\end{gather*}
+
+It remains to verify that the equation is in fact an equation of a straight line. Consider the graph of the straight line through \((1,1)\) and \((2,4)\).
+
+\desmos{kammhtwwpj}{100}{600}
+
+In this case, we are claiming that the equation for our straight line is \[(x-1)(4-1)=(y-1)(2-1).\]
+The dashed horizontal and vertical lines are telling us how we have changed in the \(x\) direction and the \(y\) direction respectively. That is \(2-1\) is the length of the dashed horizontal line and the change in the \(x\) coordinate between the two points. Also, \(4-1\) is the length of the dashed vertical line and the change in the \(y\) coordinate. The dashed lines form a right triangle. Suppose we have any other point on the line.
+
+\desmos{gnjtgluley}{100}{600}
+
+The two right triangles shown are \emph{similar} triangles. In fact, any other point on the line will form a similar right triangle like this. This means that the ratio of their leg lengths are equivalent! That is, if we have any third point, \((x,y),\) on the line we know that
+\[\frac{x-1}{y-1} = \frac{2-1}{4-1}.\]
+Multiplying both sides by each denominator we get
+\[(x-1)(4-1)=(y-1)(2-1).\]
+
+ If we have either a vertical or horizontal line, we cannot make these similar triangles. Suppose we want the straight line through \((1,3)\) and \((1,2).\) This is a vertical line. Then the equation for this line is
+ \begin{gather*}
+     (x-1)(3-2) = (1-1)(y-2) \\
+     x-1 = 0 \\
+     x=1.
+ \end{gather*}
+
+ Likewise if we have the straight line through \((2,1)\) and \((3,1)\) then the equation is
+ \begin{gather*}
+     (x-2)(1-1) = (3-2)(y-1) \\
+     0=y-1 \\
+     y=1.
+ \end{gather*}
+
+ Since it turns out that the ratio between the change in \(y\) and the change in \(x\) was the defining feature of the straight line we give it a name.
+
+ \begin{definition}
+     Let \((x_0,y_0)\) and \((x_1,y_1)\) be two different points on a nonvertical line. The \emph{slope} of the line is
+     \[m = \frac{y_1-y_0}{x_1-x_0} \left( = \frac{\textrm{``vertical change''}}{\textrm{``horizontal change''}}\right)\]
+ \end{definition}
+
+ The first line that we saw -- through \((1,1)\) and \((2,4)\) -- has slope \(\frac{4-1}{2-1} = 3.\)
+
+ Some lines of other slopes:
+
+ \desmos{gb27tqyumb}{100}{600}
+
+ Horizontal lines have slope \(0\) since ``vertical change'' \(=0\) and vertical lines have \emph{no} slope since ``horizontal change'' \(=0\) and division by \(0\) is \emph{undefined.}
+
+ A point on a line and a slope for the line determine the line.
+
+ \begin{definition}
+     The line through the point \((x_1,y_1)\) which has slope \(m\) is given by the equation
+     \[y-y_1 = m(x-x_1).\]
+     This is called the \emph{point-slope form} of the equation for the line.
+ \end{definition}
