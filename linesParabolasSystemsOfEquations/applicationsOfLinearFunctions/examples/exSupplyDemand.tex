@@ -1,0 +1,33 @@
+In economics it is standard that the vertical axis represents price and the horizontal axis represents supply. In terms of price and quantity, there are two important equations. The first is the \emph{demand equation} which is an equation relating how much quantity \(q\) will be purchased in a certain amount of time at price \(p.\) Generally, the lower the price the more that is bought. Thus a demand curve (the set of solutions to the demand equation) might look something like
+
+\desmos{qb5gcgwftd}{100}{600}
+
+Note that this function is \emph{falling} from left to right. Such a function is called a \emph{decreasing function.}
+
+The second is the \emph{supply equation} which relates how much quantity \(q\) producers are willing to supply at price \(p.\) The higher the price, the more the producer is willing to supply. A supply curve might look something like
+
+\desmos{e3n2hjdkc5}{100}{600}
+
+Note that this function is \emph{rising} from left to right. Such a function is called a \emph{increasing function.}
+
+Functions that are increasing or decreasing are always one-to-one. Suppose we have an increasing function \(f\) and a horizontal line \(y=a\). If this line intersects the graph of the function then there is an \(x\) such that \(f(x)=a.\) Since the function is rising from left to right, for values less than \(x\) the output will be less than \(a.\) Similarly, for values greater than \(x\) the output will be greater than \(a.\) That is the horizontal line splits the graph in two with one piece entirely below the line and another piece entirely above. The conclusion is that the horizontal only meets the graph of \(f\) once.
+
+\desmos{4ot3wocyrw}{100}{600}
+
+In the following problem, we will assume that the supply and demand equations are linear.
+
+\begin{example}
+    Suppose the demand per week for a product is \(150\) units when the price is \(\$24\) and \(200\) at \(\$20.\) Determine the demand equation, assuming it is linear.
+
+    \begin{solution} In point-slope form we have
+        \(
+            p-24=m(q-150).
+        \)
+
+        Then \(m = \frac{24-20}{150-200} = -\frac{2}{25}.\)
+        
+        How did I know that we needed change in \(p\) in the numerator and change in \(q\) in the denominator? I can either relabel the point-slope equation replacing \(y\) with \(p\) and \(x\) with \(q;\) else recall that \((p,q)\) is on the line through both points if we have that \(\frac{p-24}{q-150}=\frac{\textrm{``change in p''}}{\textrm{``change in q''}}.\)
+
+        The equation is \(p-24 = -\frac{2}{25}(q-150).\) We can solve for either \(p\) or \(q.\) Suppose there is a law stipulating that this product cannot be sold for more than \(\$30\) per unit. It is natural to ask "How much can be sold in a week if prices are less than or equal to \(\$30\) per unit?" Phrased this way we are considering the price to be the independent variable. You can also ask "What quantity keeps the price under \(\$30\) per unit." However, the answer to both questions is happening at the same point on the line representing demand. On the other hand, suppose the seller only has enough storage space to hold \(100\) units of the product. The natural question is now "How should the product be priced so that there is never more than \(100\) units in storage?" In this case, we are taking the quantity to be the independent variable.
+    \end{solution}
+\end{example}

@@ -1,0 +1,48 @@
+\begin{definition}
+    A function \(f\) is a \emph{quadratic function} if and only if for all real numbers \(x\), \(f(x) = ax^2+bx+c\) where \(a,b,c\) are real numbers and \(a\ne 0.\) 
+\end{definition}
+
+\begin{question}
+Which of the following are quadratic functions.
+    \begin{selectAll}
+        \choice[correct] {\(f(x) = x^2-2x+3\)}
+        \choice {\(g(t) = t+1\)}
+        \choice {\(q(p) = \frac{1}{p^2}\)}
+        \choice[correct]{\(h(s) = s^2+7s-2\)}
+        \choice[correct]{\(r(t) = \sqrt{2}t^2\)}
+    \end{selectAll}
+\end{question}
+
+The graph of a quadratic function is called a \emph{parabola.} Two arbitrary points in the plane do not uniquely determine a parabola. That is, given two points in the plane there are many parabolas that pass through them. However, there are two geometric features that uniquely determine a quadratic function.
+
+\begin{definition}
+    Consider the general quadratic function \(f(x) = ax^2+bx+c.\) The \emph{vertex} of the parabola is \(\left(\frac{-b}{2a},\frac{-b^2+4ac}{4a}\right)\) The \(y\)-intercept is \((0,c).\)
+\end{definition}
+
+NOTE: The \(y\)-coordinate of the vertex is \(f\left(\frac{-b}{2a}\right).\) When finding the vertex of a given quadratic, the easiest and most consistent method is to find the \(x\)-coordinate first and then to evaluate \(f\) at that value to get the \(y\)-coordinate.
+
+If \(a>0\) then the parabola opens \emph{upwards} and the vertex is the point which is \emph{lowest} on the parabola. If \(a<0\) then the parabola opens \emph{downwrds} and the vertex is the point which is \emph{highest} on the parabola. The parabola is symmetric about the vertical line through the vertex. We call this line the axis of symmetry.
+
+\desmos{04qpgzpzvf}{100}{600}
+
+If they are distinct points, the vertex and \(y\)-intercept uniquely determine the quadratic function.
+
+Suppose we have a vertex \((u,v)\) and a \(y\)-intercept \((0,c).\) We want to see that in there is only one \(f(x) = ax^2+bx+c\) with this vertex and \(y\)-intercept. So we want to see that \(a\) and \(b\) depend only on the fixed values \(u,v,c.\)
+
+Well, the vertex of \(f\) is \(\left(\frac{-b}{2a},\frac{-b^2+4ac}{4a}\right) = (u,v).\) We have 
+\begin{gather}
+    u = \frac{-b}{2a} \\
+    v= \frac{-b^2+4ac}{4a}.
+\end{gather}
+
+Solving for \(a\) in both \((1)\) and \((2)\) we get both of the following equations
+
+\begin{gather}
+    a = \frac{-b}{2u} \\
+    a = \frac{b^2}{4(c-v)}.
+\end{gather}
+
+Since the vertex and \(y\)-intercept are distinct we do not have division by \(0!\)
+
+Thus we have \(\frac{-b}{2u} = \frac{b^2}{4(c-v)}.\) Solving for \(b,\) we get \(b = \frac{2(v-c)}{u}.\) Thus we have \(b\) in terms of \(u,v,c.\) We plug this expression for \(b\) into either of our expressions for \(a\) and get \(a = \frac{c-v}{u^2}.\) Thus we have \(a\) in terms of \(u,v,c\) as desired. That is \(f\) is the unique quadratic
+\[f\left(x\right) =\frac{c-v}{u^2}x^2 + \frac{2(v-c)}{u}x +c.\]
