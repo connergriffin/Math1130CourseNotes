@@ -16,13 +16,34 @@ The total sum, \(S,\) after \(n\) at rate \(r\) being applied to the principal \
     \end{solution}
 \end{example}
 
+A graph of the interest formula as a function of time.
+
+\desmos{u3efsu5v6t}{100}{600}
+
 \begin{example}
-    Suppose \(\$100\) is invested for \(10\) years at \(3\%\) compounded quarterly. Find the compound amount. (i.e. the total sum after \(10\) years at \(3\%\)) Find the compound interest.
+    Suppose \(\$100\) is invested for \(10\) years at \(3\%\) quarterly interest compounded quarterly. Find the compound amount. (i.e. the total sum after \(10\) years at \(3\%\)) Find the compound interest.
     \begin{solution}
         In \(10\) years time, how many units of \(3\) months will occur? Well, \(10\) years is \(120\) months. Thus we have that the interest will compound \(\frac{120}{3} = 40\) times! That is the \(n\) that we need to take for our interest formula.
+
+        Since the interest rate matches the interest frequency we use the rate as given; however, typically interest rates are \emph{annual} rates. In which case, we would have to divide the rate by the number of interest periods in a year.
 
         \[S = 100(1+0.03)^{40} \approx 326.20\]
 
         Thus the total compound interest earned is \(S-P = 226.20\)
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Suppose \(\$100\) is invested for \(10\) years at \(3\%\) annual interest compounded quarterly. Find the compound amount. (i.e. the total sum after \(10\) years at \(3\%\)) Find the compound interest.
+    \begin{solution}
+        In \(10\) years time, how many units of \(3\) months will occur? Well, \(10\) years is \(120\) months. Thus we have that the interest will compound \(\frac{120}{3} = 40\) times! That is the \(n\) that we need to take for our interest formula.
+
+        Since the interest rate is annual, we need to find the \emph{quarterly} interest rate. There are \(4\) quarters in a year.
+
+        \(r = 0.03/4 = 0.0075\)
+        
+        \[S = 100(1+0.00.75)^{40} \approx 134.83\]
+
+        Thus the total compound interest earned is \(S-P = 34.83\)
     \end{solution}
 \end{example}
