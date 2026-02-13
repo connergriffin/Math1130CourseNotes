@@ -1,0 +1,103 @@
+When graphing exponential functions there are two essentialy distinct categories. The exponential functions in which \(b>1\) when the function has the form \(b^x\) comprise one category. The exponential functions in which \(1>b>0\) form the second category.
+
+\begin{example}
+    Graph \(f(x) = 2^x.\)
+    \begin{solution}
+        Let's start by making a table of relevant function values. 
+        \begin{table}
+            \centering
+            \begin{tabular}{c|c}
+                 \(x\) & \(2^x\) \\
+                  \(-3\) &  \(\frac{1}{8}\) \\
+                  \(-2\) & \(\frac{1}{4}\) \\
+                  \(-1\) & \(\frac{1}{2}\) \\
+                  \(0\) & \(1\) \\
+                  \(1\) & \(2\) \\
+                  \(2\) & \(4\) \\
+                  \(3\) & \(8\) \\
+            \end{tabular}
+            \caption{Table of function values}
+        \end{table}
+
+        Let's plot these points and then draw a line connecting them in a reasonable way.
+
+        \desmos{j5fv0qelnv}{100}{600}
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Graph \(f(x) = 7^x.\)
+    \begin{solution}
+        Let's start by making a table of relevant function values. 
+        \begin{table}
+            \centering
+            \begin{tabular}{c|c}
+                 \(x\) & \(7^x\) \\
+                  \(-3\) &  \(\frac{1}{343}\) \\
+                  \(-2\) & \(\frac{1}{49}\) \\
+                  \(-1\) & \(\frac{1}{7}\) \\
+                  \(0\) & \(1\) \\
+                  \(1\) & \(7\) \\
+                  \(2\) & \(49\) \\
+                  \(3\) & \(343\) \\
+            \end{tabular}
+            \caption{Table of function values}
+        \end{table}
+
+        Let's plot these points and then draw a line connecting them in a reasonable way.
+
+        \desmos{kkxnjaqp13}{100}{600}
+    \end{solution}
+\end{example}
+
+
+    Let's compare the two functions above plotted together.
+
+    \desmos{v6vjkd9aaa}{100}{600}
+
+    Notice that \(7^x\) grows much faster than \(2^x!\) Otherwise, they have the same shape and general behavior. Let's also compare \(2^x\) to \(x^2.\)
+
+    \desmos{aphvzifkqz}{100}{600}
+
+    Exponential functions grow faster than polynomials! They do not have a shape like any polynomial. Polynomials have ``tails'' which exponential functions lack. Also, exponential functions are strictly positive!
+
+\begin{example}
+    Graph \(f(x) = \frac{1}{2^x}.\)
+    \begin{solution}
+        Notice that this function is not already written in the general form of an exponential function given in the definition. We can rewrite it slightly using rules of exponents.
+        \(f(x) = \frac{1}{2^x} = 2^{-x} = \left(2^{-1}\right)^{x} = \left(\frac{1}{2}\right)^x\)
+        Let's start by making a table of relevant function values. 
+        \begin{table}
+            \centering
+            \begin{tabular}{c|c}
+                 \(x\) & \(\frac{1}{2^x}\) \\
+                  \(-3\) &  \(8\) \\
+                  \(-2\) & \(4\) \\
+                  \(-1\) & \(2\) \\
+                  \(0\) & \(1\) \\
+                  \(1\) & \(\frac{1}{2}\) \\
+                  \(2\) & \(\frac{1}{4}\) \\
+                  \(3\) & \(\frac{1}{8}\) \\
+            \end{tabular}
+            \caption{Table of function values}
+        \end{table}
+
+        Let's plot these points and then draw a line connecting them in a reasonable way.
+
+        \desmos{sbb5m3dovf}{100}{600}
+    \end{solution}
+\end{example}
+
+Let's make a table of the following properties of exponential functions that we can observe from the graph.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c}
+         Domain and Range & The domain is \((-\infty,\infty).\) The range is \((0,\infty)\)  \\
+         Intercepts & It has \(y\)-intercept \((0,1).\) Note that this is independent of \(b!\) \\
+         Rising or falling & If \(b>1\) then the function is rising. If \(1>b>0\) then the function is falling. \\
+         Long term behavior & If \(b>1\) then it grows faster than a polynomial as the \(x\)-values get very large positive, \\ & and it gets very close to \(0\) for \(x\)-values very large negative. \\
+         If \(1>b>0\) &then it gets very close to \(0\) for \(x\)-values very large positive \\ & and it grows quickly as the \(x\)-values get very large negative.
+    \end{tabular}
+    \caption{Properties of the exponential function \(f(x) =b^x\)}
+\end{table}
