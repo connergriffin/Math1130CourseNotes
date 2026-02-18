@@ -1,0 +1,83 @@
+\begin{example}
+    The inverse of \(f\left(x\right) = \frac{x-2}{2x+3}\) is \(f^{-1}\left(x\right) = \frac{3x+2}{1-2x}\)
+    We need to show that \(f\left(f^{-1}\left(x\right)\right)=x\) for every \(x\) in the domain of \(f^{-1}\) and likewise for \(f^{-1}\left(f\left(x\right)\right).\)
+    
+    Suppose \(x \ne \frac{1}{2}.\)
+    \begin{gather*}
+        f\left(f^{-1}\left(x\right)\right)  = \frac{f^{-1}\left(x\right)-2}{2f^{-1}\left(x\right)+3} \\
+        = \frac{\frac{3x+2}{1-2x}-2}{2\frac{3x+2}{1-2x}+3}\\
+        = \frac{\frac{3x+2-2\left(1-2x\right)}{1-2x}}{\frac{2\left(3x+2\right)+3\left(1-2x\right)}{1-2x}}\\
+        =\frac{3x+2-2\left(1-2x\right)}{2\left(3x+2\right)+3\left(1-2x\right)}\\
+        =\frac{7x}{7} \\
+        =x
+    \end{gather*}
+    Suppose \(x \ne -\frac{3}{2}.\)
+    \begin{gather*}
+        f^{-1}\left(f\left(x\right)\right)  = \frac{3f\left(x\right)+2}{-2f\left(x\right)+1} \\
+        = \frac{3\frac{x-2}{2x+3}+2}{-2\frac{x-2}{2x+3}+1} \\
+        = \frac{\frac{3x-6+2\left(2x+3\right)}{2x+3}}{\frac{-2\left(x-2\right)+\left(2x+3\right)}{2x+3}}\\
+        =\frac{3x-6+2\left(2x+3\right)}{-2\left(x-2\right)+\left(2x+3\right)}\\
+        =\frac{7x}{7} \\
+        =x
+    \end{gather*}
+\end{example}
+
+For all functions of the form \(f\left(x\right) = \frac{ax+b}{cx+b}\) we can find the inverse algebraically.
+
+\begin{example}
+    Find the inverse of \(g(t)=2t-3.\)
+    \begin{solution}
+        We need that \(g\left(g^{-1}\left(t\right)\right)=t.\) So, in \(g\left(t\right),\) we plug \(g^{-1}\left(t\right)\) in for \(t\) and then solve for \(g^{-1}.\)
+        \begin{gather*}
+            g\left(g^{-1}\left(t\right)\right)=t \\
+            2g^{-1}\left(t\right)-3=t \\
+            g^{-1}\left(t\right) = \frac{1}{2}t+\frac{3}{2}
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+Note that geometrically, the graph of \(f^{-1}\) can be obtained by reflecting the graph of \(f\) about the line \(y=x\) since such a reflection amounts to swapping the \(x\) and \(y\) coordinates. Let's observe this in the graph of the functions from the first example.
+
+\desmos{x3wv6iqqmf}{100}{600}
+
+Not all functions are invertible on their entire domain. Considering that geometrically, the inverse of a function is the function reflected about \(y=x,\) a function has an inverse if it passes the vertical line test after being reflected about \(y=x\) so that we do in fact have a function. Vertical lines are horizontal lines after being reflected about \(y=x,\) so the condition we are looking for is a \emph{horizontal line test.} Put another way, if we are to ``undo'' \(f\) with a \emph{function} everything in the range of \(f\) must have been assigned to only a single number in the domain.
+
+\begin{definition}
+    A function \(f\) is \emph{one-to-one} if and only if \(f(x) = f(y)\) implies \(x=y.\) 
+\end{definition}
+
+All functions of the form \(f(x) = \frac{ax+b}{cx+d}\) are one-to-one on their entire domain (i.e when \(x \ne -\frac{d}{c}\)). Indeed,
+\begin{gather*}
+    \frac{ax+b}{cx+d} = \frac{ay+b}{cy+d} \\
+    \left(ax+b\right)\left(cy+d\right)=\left(ay+b\right)\left(cx+d\right) \\
+    acxy+adx+bcy+bd=acxy+ady+bcx+bd \\
+    adx+bcy=ady+bcx \\
+    (ad-bc)x = (ad-bc)y \\
+    x=y
+\end{gather*}
+
+The function \(f(x)=x^2\) -- with domain the entire real line -- is not one-to-one since \(f(-1)=f(1)\) but \(-1\ne 1.\) You can think of this as the ``horizontal line test.''
+
+\begin{theorem}[Horizontal Line Test]
+    A function is one-to-one if every horizontal line passes through the graph of the function at most one time.
+\end{theorem}
+
+\begin{theorem}
+    A function has an inverse if and only if it is one-to-one.
+\end{theorem}
+
+For some functions, we need to define a new type of function for the inverse!
+
+\begin{example}
+    If we take the domain of \(f\left(x\right) = x^2\) to be \(\left[0,\infty\right),\) then the inverse is \(f^{-1}\left(x\right) = \sqrt{x}.\) Use this to find the inverse of \(f\left(x\right) = \frac{1}{x^2+4}\) on the domain \(\left[0,\infty\right).\)
+    \begin{solution}
+        \begin{gather*}
+            f\left(f^{-1}\left(x\right)\right) = x \\
+            \frac{1}{\left(f^{-1}\left(x\right)\right)^2+4} =x\\
+            1= x\left(\left(f^{-1}\left(x\right)\right)^2+4\right) \\
+            1-4x = x(f^{-1}\left(x\right))^2 \\
+            (f^{-1}(x))^2 = \frac{1}{x}-4\\
+            f^{-1}\left(x\right) = \sqrt{\frac{1}{x}-4}
+        \end{gather*}
+    \end{solution}
+\end{example}
