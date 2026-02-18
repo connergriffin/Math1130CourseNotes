@@ -1,0 +1,49 @@
+We can apply the fact that the exponential function and the logarithmic function are inverses to solve equations involving them.
+
+\begin{example}
+    Solve for \(x\) given that \(\log_2(x) = 5.\)
+    \begin{solution}
+        The exponential function \(2^x\) undoes \(\log_2.\) Thus we need to apply this function to both sides of the equation.
+        \[2^{\log_2(x)} = 2^5\]
+        The left hand side becomes \(x.\) The right hand side is \(32.\)
+        \[x=32.\]
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Solve for \(x\) given that \(\log(x-2)=3.\)
+    \begin{solution}
+        \begin{gather*}
+            \log(x-2)=3 \\
+            10^{\log\left(x-2\right)} = 10^3 \\
+            x-2 = 1000 \\
+            x=1002.
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Solve for \(x\) given that \(\log_x\left(64\right)=3.\)
+    \begin{solution}
+        This is a bit different because now the \emph{base} of the logarithm is varying. This is fine. Now the function that undoes the logarithm is the function \(f(a) = x^a.\) We apply this function to both sides as before.
+        \begin{gather*}
+            \log_x\left(64\right)=3 \\
+            x^{\log_x\left(64\right)}=x^3 \\
+            64= x^3 \\
+            x=4
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Solve for \(x\) given that \(e^{\left(x^2\right)} = 4.\)
+    \begin{solution}
+        Now the function that undoes the exponential is \(\ln.\) We apply it to both sides.
+        \begin{gather*}
+            e^{x^2} = 4 \\
+            \ln\left(e^{x^2}\right) = \ln 4\\
+            x^2 = \ln(4) \\
+            x=\sqrt{\ln\left(4\right)}
+        \end{gather*}
+    \end{solution}
+\end{example}
