@@ -1,0 +1,22 @@
+\documentclass{ximera}
+
+\title{Section 4.3 Properties of Logarithmic Functions}
+\author{Conner Griffin}
+
+\begin{document}
+\begin{abstract}
+    
+\end{abstract}
+\maketitle
+
+The logarithm inherits many properties from the exponential function. Recall that for example, \(b^{x+y} = b^xb^y.\) Converting to a logarithmic expression we write \(\log_b(x)+\log_b(y) = \log_b(xy).\) Indeed, keeping in mind that \(x = b^{\log_b\left(x\right)},\) we can manipulate the rule for the exponential.
+\begin{gather*}
+    \log_b\left(xy\right) = \log_b\left(b^{\log_b\left(x\right)}b^{\log_b\left(y\right)}\right) \\
+    =\log_b\left(b^{\log_b\left(x\right)+\log_b\left(y\right)}\right) \\
+    =\log_b(x) + \log_b(y)
+\end{gather*}
+
+\input{exponentialLogarithmicFunctions/propertiesOfLogs/theorems/thmLogRuleOmni}
+\input{exponentialLogarithmicFunctions/propertiesOfLogs/examples/exApplyingLogProperties}
+
+\end{document}

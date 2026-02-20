@@ -1,0 +1,94 @@
+Refer to the \(\ln\) table for the next three examples.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c}
+        \(x\) & \(\ln(x)\)  \\ \hline
+         \(2\) &  \(0.693\) \\
+         \(3\) & \(1.099\) \\
+         \(5\) & \(1.609\) \\
+         \(7\) & \(1.946\) \\
+         \(11\) & \(2.398\) \\
+         \(13\) & \(2.565\) \\
+    \end{tabular}
+    \caption{Table of \(\ln\) values for first few prime numbers}
+\end{table}
+
+\begin{example}
+    Find \(\ln\left(26\right).\)
+    \begin{solution}
+        \(\ln\left(26\right) = \ln\left(13\cdot2\right) = \ln\left(13\right)+\ln\left(2\right) \approx 2.565+0.693 = 3.258\)
+    \end{solution}
+\end{example}
+
+If we have a table of \(\log_b\) values for the prime numbers we can approximate the \(\log_b\) of any positive integer by finding its prime factorization and then applying log rules \(a\) and \(b.\)
+
+\begin{example}
+    Find \(\ln\left(108\right).\)
+    \begin{solution}
+        \(\ln\left(108\right) = \ln\left(2^23^3\right) = \ln\left(2^2\right)+\ln\left(3^3\right) = 2\ln\left(2\right)+3\ln\left(3\right) \approx 2\left(0.693\right)+3\left(1.099\right) = 4.683\)
+    \end{solution}
+\end{example}
+
+Log rule \(b\) applies to any real number exponent!
+
+\begin{example}
+    Find \(\ln\left(\sqrt{2}\right).\)
+    \begin{solution}
+        \(\ln\left(\sqrt{2}\right) = \ln\left(2^{\frac{1}{2}}\right) = \frac{1}{2}\ln\left(2\right) \approx \frac{1}{2}0.693 = 0.3465\)
+    \end{solution}
+\end{example}
+
+We can rewrite logarithmic expressions using the log rules.
+
+\begin{example}
+    Write \(\log\left(\frac{x}{x+1}\right)\) in terms of \(\log\left(x\right)\) and \(\log\left(x+1\right).\)
+    \begin{solution}
+        \(\log\left(\frac{x}{x+1}\right) = \log\left(x\right) -\log\left(x+1\right).\)
+    \end{solution}
+\end{example}
+
+We have a new domain consideration to add to ``no division by zero and no square roots of negatives.'' We cannot have the logarithm of a non-positve number (i.e. a number that is either negative or zero.)
+
+\begin{example}
+    Find the domain of \(f(x)=\log\left(\frac{x}{x+1}\right).\)
+    \begin{solution}
+        We might first apply the log rules as in the above example.
+
+        \(f(x) = \log(x) - \log(x+1)\)
+
+        In order for \(f\) to be defined at \(x,\) we need both \(x>0\) and \(x+1 >0.\) Thus the domain of the rewritten \(f\) is \(\left(0,\infty\right).\)
+
+        There is something else to consider! In the original version of \(f\) we need \(\frac{x}{x+1} >0.\) This happens most generally when both \(x\) and \(x+1\) have the same sign. In other words when they are both positive or both negative. In the rewritten \(f\) we only considered when they are both positive. When are they both negative? When \(x<0\) and \(x+1<0.\) This happens on the interval \(\left(-\infty,-1\right).\) Thus the domain of the original function is \(\left(-\infty,-1\right) \cup \left(0,\infty\right)\) and we can only rewrite \(f\) as we did when restricting the domain to \(\left(0,\infty\right).\)
+    \end{solution}
+\end{example}
+
+
+It is often that we only care about \(x>0\) and so we do not worry about preserving the full domain.
+\begin{example}
+    Write the expression in terms of \(\ln\left(x\right),\) \(\ln\left(x+1\right)\) and \(\ln\left(x^2+1\right)\) assuming that \(x>0.\)
+    \[\ln\left(\frac{\sqrt{x}\left(x^2+2x+1\right)}{x^2+1}\right)\]
+    \begin{solution}
+        \begin{gather*}
+            \ln\left(\frac{\sqrt{x}\left(x++2x+1\right)}{x^2+1}\right) = \ln\left(\sqrt{x}\left(x+2x+1\right)\right) - \ln\left(x^2+1\right) \\
+            =\ln\left(\sqrt{x}\right) + \ln\left(x+2x+1\right) - \ln\left(x^2+1\right) \\
+            = \frac{1}{2}\ln\left(x\right) + \ln\left(\left(x+1\right)^2\right) - \ln\left(x^2+1\right) \\
+            = \frac{1}{2}\ln\left(x\right) + 2\ln\left(x+1\right) - \ln\left(x^2+1\right)
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+Why are we not rewriting \(\ln\left(x^2+1\right)?\) It has no real roots and thus does not factor into a product of linear terms! Thus there is nothing we can do.
+
+\begin{example}
+    Rewrite \(\log\left(x\right)\) in terms of the natural logarithm.
+    \begin{solution}
+        We need to apply log rule \((d).\)
+        \begin{gather*}
+        \log\left(x\right) \overset{d}{=} \log\left(x\right)\log_e\left(x\right)\log_x\left(e\right) \\
+        \overset{a}{=} \log\left(x^{\log_x\left(e\right)}\right)\log_e\left(x\right) \\
+        =\log\left(e\right)\ln\left(x\right) \\
+        \overset{d}{=}\frac{\ln\left(x\right)}{\ln\left(10\right)}
+        \end{gather*}
+    \end{solution}
+\end{example}
