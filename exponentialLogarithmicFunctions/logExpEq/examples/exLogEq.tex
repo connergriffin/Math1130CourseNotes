@@ -1,0 +1,54 @@
+Recall that in the previous section we have a particular consideration when applying the identity \(\ln\left(x\right) - \ln\left(x+1\right) = \ln\left(\frac{x}{x+1}\right).\) The issue is that the left hand side is only defined for \(x>0\) while the right hand side is defined for \(x>0\) or \(x<-1.\) In the following example we will need to keep this in mind and check that the solution we find is in the correct interval. It might be that we add a solution!
+
+\begin{example}
+    Solve for \(x\) given that \(\ln\left(x\right) = \ln\left(x+1\right)-2.\)
+    \begin{solution}
+        We begin by isolating \(\ln.\)
+        \begin{gather*}
+            \ln\left(x\right) = \ln\left(x+1\right)-2 \\
+            \ln\left(x\right) - \ln\left(x+1\right) = -2\\
+            \ln\left(\frac{x}{x+1}\right) = -2 \\
+            e^{\ln\left(x/\left(x+1\right)\right)} = e^{-2} \\
+            \frac{x}{x+1} = e^{-2} \\
+            x = e^{-2}x+e^{-2} \\
+            \left(1-e^{-2}\right)x = e^{-2} \\
+            x=\frac{e^{-2}}{1-e^{-2}} \\
+            x=\frac{1}{e^{2}-1}
+        \end{gather*}
+
+        We need that our solution is positive so that both sides of the equation are defined at the solution. Is \(\frac{1}{e^2-1} >0?\) This is equivalent to \(e^2-1>0\) which is equivalent to \(e^2 >1.\) Well, \(e>2\) which means that \(e^2>4>1.\) Our solution is positive and hence is a solution to the original equation.
+
+        We can avoid doing this kind of analysis by applying \(e^x\) to both sides from the beginning without applying log rules. Since we do not apply log rules there is not a possibility that we lose or gain solutions.
+
+        \begin{gather*}
+            \ln\left(x\right) = \ln\left(x+1\right)-2 \\
+            e^{\ln\left(x\right)} = e^{\ln\left(x+1\right)-2} \\
+            x = e^{\ln\left(x+1\right)}e^{-2} \\
+            x = \left(x+1\right)e^{-2} \\
+            \vdots \\
+            x= \frac{1}{e^2-1}
+        \end{gather*}
+    \end{solution}
+    \end{example}
+
+    The same kind of issue comes up when applying this log rule in the other direction; however, when going in the other direction we might \emph{lose} solutions if we are not careful. This is in a way worse than gaining solutions because when we gain solutions we can simply plug the values back in to check if they are actually solutions. It is recommended that you do not use the log rules
+    \[\log\left(ab\right) = \log\left(a\right)+\log\left(b\right)\]
+    and
+    \[\log\left(b^a\right) = a\log\left(b\right)\]
+    when for the first one, both \(a\) and \(b\) vary with \(x,\) or in the second one when \(b\) varies with \(x.\) For example, it is fine to use when you have \(\ln\left(\frac{10}{x^2+1}\right)\) and should not be used when \(\ln\left(\frac{x}{x^2+1}\right).\) Neither log rule should be used when we have \(\log\left(\left(x-1\right)^2\right).\)
+    \begin{example}
+        Solve for \(x\) given that \(\log\left(4\left(x-1\right)^2\right) = 2.\)
+        \begin{solution}
+            Apply \(10^x\) to both sides, and then solve for \(x.\)
+            \begin{gather*}
+                \log\left(4\left(x-1\right)^2\right) = 2 \\
+                10^{\log\left(4\left(x-1\right)^2\right)} = 10^2 \\
+                4\left(x-1\right)^2 = 100\\
+                x^2-2x+1 = 25\\
+                x^2-2x-24=0\\
+                \left(x-6\right)\left(x+4\right) = 0\\
+                x=6,-4
+            \end{gather*}
+            If we instead first applied \(\log\left(b^a\right) = a\log\left(b\right)\) then the only solution we would get is \(x=6\) and we would miss the \(x=-4\) solution.
+        \end{solution}
+    \end{example}

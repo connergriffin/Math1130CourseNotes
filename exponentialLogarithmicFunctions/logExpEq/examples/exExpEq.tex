@@ -1,0 +1,59 @@
+We will begin this section with some examples of exponential equations using the logarithm. Keep in mind that we will keep \(\log_b\left(x\right)\) in this form unless \(x\) is an integer power of \(b.\) In this case we can simplify since \(\log_b\left(x\right)\) would be an integer. For example, \(\log_5\left(25\right)\) should be simplified and written as \(2.\) Whereas, \(\log_5\left(2\right)\) is left as is.
+
+An exception to this rule, if \(x\) in \(\log_b\left(x\right)\) is represented as a power of \(b\) then we simplify by writing the logarithm as that power. For example, \(\log_5\left(\sqrt{5}\right) =\frac{1}{2}.\)
+
+\begin{example}
+    Solve for \(x\) given that \(2^{2x+1}=8^{3x-1}.\)
+    \begin{solution}
+        When comparing two exponential expressions, always apply the logarithm with the smaller base. This pays off in the instance that the larger base is a power of the smaller. Whatever logarithm we choose will give us a solution, it just may be a solution that is difficult to simplify.
+        \begin{gather*}
+            2^{2x+1}=8^{3x-1} \\
+            \log_2\left(2^{2x+1}\right) = \log_2\left(8^{3x-1}\right) \\
+            2x+1 = (3x-1)\log_2\left(8\right) \\
+            2x+1 = (3x-1)3 \\
+            1+3 = 9x-2x \\
+            4 = 7x \\
+            x=\frac{4}{7}
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Solve for \(t\) given that \(\frac{10}{1+e^{-t}} = 8.\)
+    \begin{solution}
+        We should first isolate the exponential so that when applying \(\ln\) we get back an expression in \(t\). If we do not do this then we will end up with \(\ln(1+e^{-t})\) and we cannot proceed any further in our goal of isolating \(t.\)
+        \begin{gather*}
+            \frac{10}{1+e^{-t}} = 8 \\
+            10 = 8\left(1+e^{-t}\right) \\
+            \frac{10}{8} = 1+e^{-t} \\
+            \frac{10}{8}-1 = e^{-t} \\
+            \frac{1}{4}=e^{-t} \\
+            \ln\left(\frac{1}{4}\right) = \ln\left(e^{-t}\right) \\
+            \ln\left(4^{-1}\right) = -t \\
+            t=\ln\left(4\right)
+        \end{gather*}
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Suppose the demand equation for a product is \(p = 15^{1-0.25q}.\) Use \(\log\) to express \(q\) in terms of \(p.\)
+    \begin{solution}
+        The question is requesting that we use \(\log\) instead of \(\log_{15}\) because \(\log\) is a more common function. This means that it is more familiar to people and our technoligical system is set up to estimate certain values easier. (e.g. dedicated \(\log\) button on a calculator)
+
+        Note that \(p = 15\cdot15^{-0.25q}\) which we know is \emph{falling} and that demand equations should be \emph{falling} when the \(q\)-axis is horizontal and the \(p\)-axis is vertical.
+        
+        We already have the exponential isolated.
+        \begin{gather*}
+            p = 15^{1-0.25q} \\
+            \log\left(p\right) = \log\left(15^{1-0.25q}\right) \\
+            \log(p) = \left(1-0.25q\right)\log(15)\\
+            0.25q = 1-\frac{\log\left(p\right)}{\log\left(15\right)} \\
+            q = \frac{1}{0.25}\left(1-\frac{\log\left(p\right)}{\log\left(15\right)}\right)\\
+            q = 4\left(1-\frac{\log\left(p\right)}{\log\left(15\right)}\right)
+        \end{gather*}
+        There are some alternative forms for this function that are acceptable. The most common would be
+        \[
+            q = \frac{4}{\log\left(15\right)}\log\left(\frac{15}{p}\right).
+        \]
+    \end{solution}
+\end{example}
