@@ -1,0 +1,16 @@
+\begin{example}
+    How long will it take an initial investment to double if you invest at \(9\%\) compounding semiannually?
+    \begin{solution}
+        The total amount after \(n\) interest periods is given by \(P\left(1+\frac{0.09}{2}\right)^n.\) We want to double \(P.\) Thus we want to solve for \(n\) in the equation
+        \[2P = P\left(1.045\right)^n\]
+        \begin{gather*}
+            2P = P\left(1.045\right)^n \\
+            2= \left(1.045\right)^n \\
+            \ln\left(2\right) = n\ln\left(1.045\right) \\
+            n = \frac{\ln\left(2\right)}{\ln\left(1.045\right)} \\
+            n\approx 15.75
+        \end{gather*}
+        Since this is a semiannual period (a.k.a \(6\) months) we divide \(n\) by \(2\) to get the number of years.
+        The initial investment will double after \(7.875\) years.
+    \end{solution}
+\end{example}
