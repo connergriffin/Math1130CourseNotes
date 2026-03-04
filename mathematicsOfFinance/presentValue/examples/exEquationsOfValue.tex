@@ -1,0 +1,26 @@
+For instances in which multiple irregular payments are made towards a debt, it will be helpful to change the point of time at which we are ``centered.''
+
+
+\begin{example}
+    Suppose that \(\$2000\) is owed in \(4\) years. Suppose it is to be paid off in \(2\) payments.
+    \begin{enumerate}
+        \item \(\$500\) in \(1\) year
+        \item a final payment at the end of \(2\) years
+    \end{enumerate}
+    How much is owed at the final payment assuming that a \(9\%\) rate compounding annually is being applied?
+    \begin{solution}
+        We want to ``center'' things at year \(2\) since this is when the unknown payment is being made.
+
+        At year \(2\) the present value of \(\$2000\) will be \(2000\left(1.09\right)^{-2}\) since this money is \(2\) years from being owed.
+
+        How do we think about the \(\$500\) payment at year \(1?\) Since that payment will have been made the year before, we can think of it as having paid \(500\left(1.09\right)\) of the present value. This accounts for the \(\$500\) paid to the principal as well as the interest that would have been applied to it in that year.
+
+        Let \(x\) represent the final payment.
+
+        Then we have the equation
+         \[500\left(1.09\right)+x = 2000\left(1.09\right)^{-2}.\]
+
+         Solving for \(x\) we get,
+         \[x = 2000\left(1.09\right)^{-2} - 500\left(1.09\right) \approx 1138.36\]
+    \end{solution}
+\end{example}

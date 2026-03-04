@@ -1,0 +1,30 @@
+\underline{Net Present Value}
+
+\begin{definition}
+    Future paymebnts from an initial investment are called \emph{cash flows}.
+\end{definition}
+
+\begin{definition}
+    \emph{Net present value (NPV)} is the sum of the present value of the cash flows minus the initial investment.
+\end{definition}
+
+NOTE: \(NPV>0\) means the investment is ultimately profitable while \(NPV<0\) means that the investment is a loss.
+
+\begin{example}
+    An initial investment of \(\$1000\) guarantees cash flows following the table. If an interest of \(3\%\) compounding annually is applied, find the net present value.
+    \begin{table}[]
+        \centering
+        \begin{tabular}{c|c}
+            year & cash flow \\\hline
+             \(1\)&\(500\) \\
+             \(2\)& \(450\) \\
+             \(3\)& \(400\)
+        \end{tabular}
+        \caption{Payements at the end of each of the first \(3\) years}
+    \end{table}
+
+    \begin{solution}
+        \[NPV = 500(1.03)^{-1}+450(1.03)^{-2}+400(1.03)^{-3}  - 1000 \approx -53.79.\]
+        A loss.
+    \end{solution}
+\end{example}
