@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\title{Section 5.3 Interest Compounded Continuously}
+\author{Conner Griffin}
+
+\begin{document}
+\begin{abstract}
+    In many cases, interest compounds ``continuously'' meaning that interest is being applied constantly rather than periodically. We present a formula for continuously compounding interest and a corresponding present value formula.
+\end{abstract}
+\maketitle
+
+As \(n\) goes towards infinity, \(\left(1+\frac{1}{n}\right)^n\) gets closer and closer to \(e,\) Euler's constant. Interest that compounds with annual frequency \(k\) at annual rate \(r\) is calculated with the formula,
+
+\[S= P\left(1+\frac{r}{k}\right)^{kt}\]
+
+where \(kt\) is the number of interest periods that go by.
+
+If interest is compounding continuously, then we are letting the annual compounding frequency go to infinity.
+
+Rewriting our formula,
+
+\[P\left(1+\frac{r}{k}\right)^{kt} = P\left(\left(1+\frac{r}{k}\right)^{\frac{k}{r}}\right)^{rt} = P\left(\left(1+\frac{1}{k/r}\right)^{\frac{k}{r}}\right)^{rt}.\]
+
+Letting \(n=\frac{k}{r}.\) We note that \(n\) is going to infinity with \(k\) and that
+
+\[P\left(\left(1+\frac{1}{k/r}\right)^{\frac{k}{r}}\right)^{rt}=P\left(\left(1+\frac{1}{n}\right)^{n}\right)^{rt}\]
+
+is going to 
+
+\[Pe^{rt}.\]
+
+\input{mathematicsOfFinance/continuouslyCompoundingInterest/definitions/defContinuouslyCompoundingInterest}
+\input{mathematicsOfFinance/continuouslyCompoundingInterest/examples/exCompoundAmount}
+
+\end{document}

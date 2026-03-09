@@ -1,0 +1,47 @@
+\begin{definition}
+    An \emph{arithmetic sequence} is an infinite sequence \(\left(b_{k}\right)_{k=1}^{\infty}\) defined recursively by
+    \[b_1 = a \ \textrm{and} \ b_k = d+b_{k-1} \ \textrm{for} \ k \ge 2\]
+    where \(a\) and \(d\) are real numbers. We call \(a\) the initial term and \(d\) the common difference.
+\end{definition}
+
+\begin{example}
+    Write out the first \(7\) terms of the arithmetic sequence with initial term \(1.2\) and common difference \(0.5\). What is the \(26\)th term?
+    \begin{solution}
+        \begin{gather*}
+            b_1 = 1.2 \\
+            b_2 = a_1 + 0.5 = 1.2+0.5 = 1.7 \\
+            b_3 = a_2 + 0.5 = 2.2 \\
+            b_4 = a_3 + 0.5 = 2.7 \\
+            b_5 = a_4 + 0.5 = 3.2 \\
+            b_6 = a_5 + 0.5 = 3.7 \\
+            b_7 = a_6 + 0.5 = 4.2
+        \end{gather*}
+        Arithmetic sequences do not have to be defined recursively. We can alternatively define the arithmetic sequence with initial term \(a\) and common difference \(d\) by \(b_k = a+\left(k-1\right)d\) for all positve integers \(k.\)
+
+        Thus \(b_{26} = 1.2 + 25(0.5) = 1.2+12.5 = 13.7.\)
+    \end{solution}
+\end{example}
+
+\begin{definition}
+    A \emph{geometric sequence} is an infinite sequence \(\left(c_{k}\right)_{k=1}^{\infty}\) defined recursively by
+    \[c_1 = a \ \textrm{and} \ c_k = rc_{k-1} \ \textrm{for} \ k \ge 2\]
+    where \(a\) and \(r\) are real numbers. We call \(a\) the initial term and \(r\) the common ratio.
+\end{definition}
+
+\begin{example}
+    Write out the first \(7\) terms of the geometric sequence with initial term \(\sqrt{3}\) and common ratio \(\frac{1}{2}\). What is the \(26\)th term?
+    \begin{solution}
+        \begin{gather*}
+            c_1 = \sqrt{3} \\
+            c_2 = \frac{1}{2}c_1 = \frac{\sqrt{3}}{2} \\
+            c_3 = \frac{1}{2}c_2 = \frac{\sqrt{3}}{4} \\
+            c_4 = \frac{1}{2}c_3 = \frac{\sqrt{3}}{8} \\
+            c_5 = \frac{1}{2}c_4 = \frac{\sqrt{3}}{16} \\
+            c_6 = \frac{1}{2}c_5 = \frac{\sqrt{3}}{32} \\
+            c_7 = \frac{1}{2}c_6 = \frac{\sqrt{3}}{64} \\
+        \end{gather*}
+        Geometric sequences do not have to be defined recursively. We can alternatively define the geometric sequence with initial term \(a\) and common ratio \(r\) by \(c_k = ar^{k-1}\) for all positve integers \(k.\)
+
+        Thus \(c_{26} = \sqrt{3}\left(\frac{1}{2}\right)^{25} = \frac{\sqrt{3}}{33554432}.\)
+    \end{solution}
+\end{example}

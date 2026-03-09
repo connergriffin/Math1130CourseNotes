@@ -1,0 +1,28 @@
+We have an explicit formula for the sum of the first \(n\) terms of a geometric series.
+
+Let \(c_k = ar^{k-1}.\) Then we have a sequence of finite sums that can be defined from \(c_k.\)
+
+\[s_n = \sum_{i=1}^{n}c_k = c_1+c_2 +\dots+c_n\]
+
+We have an explicit formula defining \(s_n.\)
+
+\[s_n = \sum_{i=1}^nar^{k-1} = \frac{a\left(1-r^n\right)}{1-r}.\] This formula works as long as \(r \ne 1.\)
+
+\begin{example} \label{finitesumgeoseries}
+    Find \(s_7\) for the geometric series with initial term \(a = \sqrt{3}\) and common ratio \(r=\frac{1}{2}.\)
+    \begin{solution}
+        \[s_7 = \sqrt{3} + \frac{\sqrt{3}}{2}+\dots +\frac{\sqrt{3}}{64} = \frac{\sqrt{3}\left(1-1/64\right)}{1-1/2}.\]
+        Simplifying we get \(s_7 = \sqrt{3}\frac{63}{32}.\)
+    \end{solution}
+\end{example}
+
+If \(-1< r < 1\) then we have a formula for the sum over the \emph{entire sequence}.
+
+\[\sum_{k=1}^{\infty}ar^{k-1} = \frac{a}{1-r}.\]
+
+\begin{example}
+    Find the sum of the geometric series in \autoref{finitesumgeoseries}.
+    \begin{solution}
+        \begin{gather*}\sum_{k=1}^{\infty}\sqrt{3}\frac{1}{2}^{k-1} = \frac{\sqrt{3}}{\frac{1}{2}} = 2\sqrt{3}. \end{gather*}
+    \end{solution}
+\end{example}

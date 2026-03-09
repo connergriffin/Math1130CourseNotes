@@ -1,0 +1,60 @@
+\begin{definition}
+    For \(n\) a positive integer, a \emph{sequence of length} \(n\) is a function from \(\{1,2,3,\dots,n\}\) to the real line. A sequence of some finite length is called a \emph{finite sequence.}
+\end{definition}
+
+There are many differences between sequences and the functions we have been considering up to this point. If \(n\) is small enough it makes sense to just write out all of the function values as an ordered list and call that the sequence.
+
+\begin{example}
+    Consider the ordered list \(2,3,5,7,11.\) If we are viewing this as a \emph{sequence}, then we have to interpret this as a function. Each real number in the list is being assigned to its position in the list. As a table of function values:
+    
+    \begin{tabular}{c|c}
+         input & output  \\\hline
+         \(1\) & \(2\) \\
+         \(2\) & \(3\) \\
+         \(3\) & \(5\) \\
+         \(4\) & \(7\) \\
+         \(5\) & \(11\)
+    \end{tabular}
+    
+    This is a sequence of length \(5.\)
+
+    This sequences is different from \(3,2,5,7,11\) because the numbers are in a different order.
+\end{example}
+
+We may defined sequences that have all positive integers as their domain.
+
+\begin{definition}
+    An \emph{infinite sequence} is a function from the positive integers \(\{1,2,3,\dots\}\) to the real line.
+\end{definition}
+
+Now that our domain is all positive integers, we can no longer write our sequence as an ordered list. In some cases, we can use a notation that is very similar to the function notation that we ahve been using.
+\begin{example}
+    Define a sequence, \(\left(a_n\right)_{n=1}^{\infty}\) whose \(n\)th term is given by \(a_n=n^2.\) This is the sequence of perfect squares. Below is a table of the first \(7\) \emph{terms} of the sequence.
+    
+     \begin{tabular}{c|c}
+         \(n\)& \(a_n\)  \\ \hline
+         \(1\) & \(1\) \\
+         \(2\) & \(4\) \\
+         \(3\) & \(9\) \\
+         \(4\) & \(16\) \\
+         \(5\) & \(25\) \\
+         \(6\) & \(36\) \\
+         \(7\) & \(49\)
+    \end{tabular}
+
+    When the rule is clear enough we will often write an ordered list ending with ellipsis \(\left(i.e \dots\right)\) as in \(1,4,9,16,25,36,\dots\) The ellipsis is indicating that the sequence goes on indefinitely.
+\end{example}
+
+Let's break down the notation \(\left(a_n\right)_{n=1}^{\infty}.\) The \(a\) is the name of the function, the \(n\) is the input, \(_{n=1}^{\infty}\) is denoting the \emph{domain} -- in this case all positive integers. 
+
+Below is a table to compare this to the function notation we have been using for functions from the real line to the real line.
+
+\begin{tabular}{c|c|c}
+    &function & sequence  \\ \hline
+     &\(f\left(x\right)\) & \(\left(a_n\right)_{n=1}^{\infty}\)\\ 
+     ``name'' & \(f\) & \(a\) \\
+     input & \(x\) & \(n\) \\
+     domain & an interval & all positive integers
+\end{tabular}
+
+FACT: For every \emph{finite sequence} \(\left(a_k\right)_{k=1}^n\) there is a polynomial, \(p,\) such that \(a_k = p\left(k\right)\) for all \(k\) in the domain of \(a.\) The \href{https://en.wikipedia.org/wiki/Lagrange_polynomial}{Lagrange polynomial} is such a polynomial. The same is \emph{not} true for infinite sequences. It is worse than that. There are infinite sequences \(\left(a_k\right)_{k=1}^{\infty}\) that cannot be defined in terms of any expression (even one that is not polynomial) in the single variable \(k.\) The sequence of \href{https://oeis.org/A000040}{prime numbers} is such an infinite sequence.
