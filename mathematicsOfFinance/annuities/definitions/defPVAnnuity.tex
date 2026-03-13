@@ -1,0 +1,36 @@
+\textbf{Present Value of an Annuity}
+
+\begin{definition}
+    The \emph{present value of an annuity} is the sum of the present values of all payments subject to some fixed rate.
+\end{definition}
+
+The present value of an annuity represents the amount that must be invested now at rate \(r\) so that all payments can be made.
+Recall from previous sections that the present value of each payment, \(R,\) subject to the periodic rate \(r\) can be calculated as in \autoref{presentValueFixedPayment}. 
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c}
+         Payment number & Present Value \\ \hline
+         \(1\)st & \(R\left(1+r\right)^{-1}\) \\
+         \(2\)nd & \(R\left(1+r\right)^{-2}\) \\
+         \(3\)rd & \(R\left(1+r\right)^{-3}\) \\
+         \vdots & \vdots \\
+         \(n\)th & \(R\left(1+r\right)^{-n}\) \\
+    \end{tabular}
+    \caption{Present value of each of the \(n\) payments}
+    \label{presentValueFixedPayment}
+\end{table}
+
+The present value of the \emph{annuity}, \(PV_a,\) is the sum of the present values of each payment. From \autoref{presentValueFixedPayment} we see that 
+
+\[PV_a = R\left(1+r\right)^{-1} + R\left(1+r\right)^{-2} + \dots + R\left(1+r\right)^{-n}.\]
+
+This is the sum of a geometric sequence and hence the formula that we have for sums of geometric sequences applies.
+
+\begin{definition}
+    The formula
+    \[PV_a = R\frac{1-\left(1+r\right)^{-n}}{r}\]
+    gives the \emph{present value} \(PV_a\) of an ordinary annuity of \(R\) per payment period for \(n\) periods at the periodic interest rate of \(r.\)
+\end{definition}
+
+It will be helpful for us to represent this as a function of \(n\) and \(r.\) Define \(a\left(n,r\right) = \frac{1-\left(1+r\right)^{-n}}{r}.\)
