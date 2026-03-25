@@ -1,0 +1,99 @@
+\begin{example}
+    You purchase a car using a loan of \(\$14500.\) The loan will be repaid in \(36\) monthly payments and the interest rate is \(6.2\%\) compounding monthly. Fill out an amortization schedule for the first \(3\) payments. What is the balance after the \(29\)th payment? How much of the \(30\)th payment is interest and how much goes towards principal?
+
+    \begin{solution}
+    We first need to find how much the equal monthly payments will be using the formula \(R = A\frac{r}{1-(1+r)^{-n}}.\)
+
+    \[n=36, \ r = \frac{0.062}{12} \approx 0.00517, \ \textrm{and} \ A = 14500.\]
+
+    \[R = 14500\frac{0.00517}{1-\left(1+0.00517\right)^{-36}} \approx 442.46\]
+        \begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         Pay \# & Pay & Interest & Principal Repaid & Balance\\
+         \(0\) & x & x & x & \(14500\) \\
+         \(1\) & \(\answer{442.46}\) & ? & ? & ? \\
+         \(2\) & \(\answer{442.46}\) & ? & ? & ?\\
+         \(3\) & \(\answer{442.46}\) & ?  & ? & ?
+    \end{tabular}
+\end{table}
+\begin{example}
+    We need to fill out the table row by row. For the fist payment, how much goes towards interest? The previous balance times the interest rate.
+    \[interest = 14500(0.00517) \approx 74.965.\]
+
+    How much goes towards principal? The amount left over.
+
+    \[principal \ repaid = 442.46 - 74.965 = 367.495.\]
+
+    What is the balance after the first payment? The old balance minus how much of \(R\) goes towards the principal.
+
+    \[Balance = 14500 - 367.495 = 14132.505.\]
+
+    \begin{tabular}{c|c|c|c|c}
+         Pay \# & Pay & Interest & Principal Repaid & Balance\\
+         \(0\) & x & x & x & \(14500\) \\
+         \(1\) & \(442.46\) & \(\answer{74.965}\) & \(\answer{367.495}\) & \(\answer{14132.505}\) \\
+         \(2\) & \(442.46\) & ? & ? & ?\\
+         \(3\) & \(442.46\) & ?  & ? & ?
+    \end{tabular}
+
+    \begin{example}
+        For the second payment how much goes towards interest? The previous balance times the interest rate.
+        \[interest = 14132.505(0.00517) \approx 73.065.\]
+
+        How much goes towards principal? The amount left over.
+
+    \[principal \ repaid = 442.46 - 73.065 = 369.395.\]
+
+    What is the balance after the second payment? The old balance minus how much of \(R\) goes towards the principal.
+
+    \[Balance = 14132.505 - 369.395 = 13763.11.\]
+
+    \begin{tabular}{c|c|c|c|c}
+         Pay \# & Pay & Interest & Principal Repaid & Balance\\
+         \(0\) & x & x & x & \(14500\) \\
+         \(1\) & \(442.46\) & \(74.965\) & \(367.495\) & \(14132.505\) \\
+         \(2\) & \(442.46\) & \(\answer{73.065}\) & \(\answer{369.395}\) & \(\answer{13763.11}\)\\
+         \(3\) & \(442.46\) & ?  & ? & ?
+    \end{tabular}
+
+    \begin{example}
+        For the third payment how much goes towards interest? The previous balance times the interest rate.
+        \[interest = 13763.11(0.00517) \approx 71.16.\]
+
+        How much goes towards principal? The amount left over.
+
+    \[principal \ repaid = 442.46 - 71.16 = 371.30.\]
+
+    What is the balance after the third payment? The old balance minus how much of \(R\) goes towards the principal.
+
+    \[Balance = 13763.11 - 371.30 = 13391.81.\]
+
+    \begin{tabular}{c|c|c|c|c}
+         Pay \# & Pay & Interest & Principal Repaid & Balance\\
+         \(0\) & x & x & x & \(14500\) \\
+         \(1\) & \(442.46\) & \(74.965\) & \(367.495\) & \(14132.505\) \\
+         \(2\) & \(442.46\) & \(73.065\) & \(369.395\) & \(13763.11\)\\
+         \(3\) & \(442.46\) & \(\answer{71.16}\) & \(\answer{371.30}\) & \(\answer{13391.81}\)
+    \end{tabular}
+    \end{example}
+    \end{example}
+\end{example}
+
+\begin{example}
+    To find the balance after the \(29\)th payment. We do not fill out the whole amortization schedule. We can think of it as the present value of an ordinary annuity. How many payments are left? \(7\)
+
+    From the previous section we know that after the \(29\)th payment, the present value of these future payments will be
+
+    \[\answer{442.46} \frac{1-\left(1+0.00517\right)^{-7}}{0.00517} \approx \answer{3034.15}.\]
+
+    How much of the \(30\)th payment goes towards interest?
+
+    \[\answer{3034.15} (0.00517) \approx \answer{15.69}.\]
+
+    How much goes towards the principal?
+
+    \[442.46 - \answer{15.69} = \answer{426.77}\]
+\end{example}
+\end{solution}
+\end{example}

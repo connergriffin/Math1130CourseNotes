@@ -1,0 +1,24 @@
+We calculate the value of the equal payments as in the previous section:
+
+\[R = \frac{A}{a\left(n,r\right)} = A\frac{r}{1-(1+r)^{-n}}.\]
+
+For amortization we have the following new formulas which we will use to determine how much of each payment goes towards interest and how much goes towards the balance.
+
+\[Interest = r\cdot Balance\]
+\[Principal / repaid = payment - interest\]
+\[Balance = old \ Balance - Principal \ repaid\]
+
+We will use it to fill out an amortization schedule which is a table of all this information.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         Pay \# & Pay & Interest & Principal Repaid & Balance\\
+         \(0\) & x & x & x & \(A\) \\
+         \(1\) & \(R\) & \(r\cdot A\) & \(R -rA\) & \(A - R -rA\) \\
+         \vdots & \vdots & \vdots & \vdots & \vdots\\
+         \(k - 1\) & \(R\) & ?  & ? & \(Ra\left(n-k+1,r\right)\) \\
+         \(k\) & \(R\) & \(rRa\left(n-k+1,r\right)\) & \(R - rRa\left(n-k+1,r\right)\)  & \(Ra\left(n-k,r\right)\)
+    \end{tabular}
+
+\end{table}
