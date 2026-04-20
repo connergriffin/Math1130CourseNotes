@@ -1,0 +1,47 @@
+Recall that we can represent a ``system of linear functions'' using a matrix wherein the entries of the matrix are the coefficients of each of the linear functions in the system. The rows of the matrix are organized by function and the columns by variable.
+
+For example
+\begin{gather*}
+    f\left(x,y,z\right) = \left(
+        11x +12y+13z, \
+        21x+22y+23z, \
+        31x+32y+33z \right).
+\end{gather*}
+
+is such a ``system of linear functions.'' Note that in reality such a function is referred to only as a linear function and that we add the word ``system'' so that we may understand the connection it has to systems of linear equations.
+
+It has the following matrix representation.
+
+\begin{gather*}
+    \begin{bmatrix}
+        11 & 12 & 13 \\
+        21 & 22 & 23 \\
+        31 & 32 & 33
+    \end{bmatrix}
+\end{gather*}
+
+Notice that when we take the product of this matrix with \(\begin{bmatrix}
+    x\\y\\z
+\end{bmatrix}\) we get a column matrix that is exactly \(f.\)
+
+If we have that \(f\left(x,y,z\right) = \left(1,2,3\right),\) then we have a \emph{system of linear equations.}
+
+\begin{gather*}
+    \begin{cases}
+        11x + 12y + 13z = 1 \\
+        21x + 22y + 23z = 2 \\
+        31x + 32y + 33z = 3
+    \end{cases}
+\end{gather*}
+
+We can represent this system of equations as an \emph{augmented matrix} where we have the matrix representing the \emph{linear function}\footnote{Watch out! Linear functions have no constant term!} appended with the column matrix of the constants in each equation. Typically a dashed or vertical line is drawn to separate the two matrices.
+
+For example, the above system of linear equations can be written as:
+
+\begin{gather*}
+    \begin{bmatrix}
+        11 & 12 & 13 & \vline & 1\\
+        21 & 22 & 23 & \vline & 2\\
+        31 & 32 & 33 & \vline &3
+    \end{bmatrix}
+\end{gather*}
