@@ -56,7 +56,7 @@
             x_3 + x_4/3 = 0
         \end{cases}\]
 
-        Note that each of \(x_1, x_2, x_3\) can be expressed as a function in the variable \(x_4.\) This makes \(x_4\) a \emph{free variable.} For any choice we make of \(x_4,\) we will get a unique solution associated to that choice. We can solve for each of \(x_1,x_2,x_3\) and then \(x_4=x_4.\) We can then express all solutions to the solution as a matrix.
+        Note that each of \(x_1, x_2, x_3\) can be expressed as a function in the variable \(x_4.\) This makes \(x_4\) a \emph{free variable.} For any choice we make of \(x_4,\) we will get a unique solution associated with that choice. We can solve for each of \(x_1,x_2,x_3\) and then \(x_4=x_4.\) We can then express all solutions to the system of equations as a matrix.
 
         \[\begin{cases}
             x_1 = 2x_4/3 + 3 \\
@@ -92,5 +92,75 @@
             0
         \end{bmatrix}\]
         This is a one parameter family of solutions. The \(x_4\) is the one parameter.
+    \end{solution}
+\end{example}
+
+There can be more than one free variable. The free variables in a solution to the system of equations correspond to the columns with no leading entry. In the example above, the fourth column -- which is associated with \(x_4\) -- has no leading entry and hence \(x_4\) was the free variable.
+
+\begin{example}
+    Find all solution to the system of linear equations.
+    \[\begin{cases}
+        x_1 + 2x_2 + x_3 + 2x_4 = 3 \\
+        x_1 + 2x_2 - x_3 + 2x_4 = 1 \\
+        2x_1 + 4x_2 - x_3 + 4x_4 = 3 \\
+        x_1 + 2x_2 - 2x_3 + 2x_4 = 0
+    \end{cases}\]
+    \begin{solution}
+        This system as an augmented matrix.
+        \[\begin{bmatrix}
+            1 & 2 & 1 & 2 & \vline & 3 \\
+            1 & 2 & -1 & 2 & \vline & -2 \\
+            2 & 4 & -1 & 4 & \vline & 3 \\
+            1 & 2 & -2 & 2 & \vline & 0
+        \end{bmatrix}\]
+
+        We first apply the row operations to zero out all of the entries in the first column other than the leading entry of row one.
+
+        \[\begin{bmatrix}
+            1 & 2 & 1 & 2 & \vline & 3 \\
+            0 & 0 & -2 & 0 & \vline & -2 \\
+            0 & 0 & -3 & 0 & \vline & -3 \\
+            0 & 0 & -3 & 0 & \vline & -3
+        \end{bmatrix}\]
+
+        The leading entry of the second row is \(-2.\) We divide the row by \(-2\) and add \(3R_2\) to each of \(R_3\) and \(R_4.\)
+
+        \[\begin{bmatrix}
+            1 & 2 & 1 & 2 & \vline & 3 \\
+            0 & 0 & 1 & 0 & \vline & 1 \\
+            0 & 0 & 0 & 0 & \vline & 0 \\
+            0 & 0 & 0 & 0 & \vline & 0
+        \end{bmatrix}\]
+
+        The reduced matrix.
+
+        \[\begin{bmatrix}
+            1 & 2 & 0 & 2 & \vline & 2 \\
+            0 & 0 & 1 & 0 & \vline & 1 \\
+            0 & 0 & 0 & 0 & \vline & 0 \\
+            0 & 0 & 0 & 0 & \vline & 0
+        \end{bmatrix}\]
+
+        Since the second and fourth columns have no leading entry, \(x_2\) and \(x_4\) will be free variables. We have a two parameter family of solutions.
+
+        As a system of equations.
+
+        \[\begin{cases}
+            x_1 + 2x_2 +2x_4 =2 \\
+            x_2 =x_2 \\
+            x_3 = 1 \\
+            x_4 = x_4
+        \end{cases}\]
+        We construct coefficient matrices for each of the free variables and matrix for the constants.
+
+        Every solution to this system of equations can be expressed by this matrix.
+
+        \[\begin{bmatrix}
+            -2 \\ 1 \\ 0 \\ 0
+        \end{bmatrix}x_2 + \begin{bmatrix}
+            -2 \\ 0 \\ 0 \\ 1
+        \end{bmatrix}x_4 +\begin{bmatrix}
+            2 \\ 0 \\ 1 \\ 0
+        \end{bmatrix}\]
     \end{solution}
 \end{example}

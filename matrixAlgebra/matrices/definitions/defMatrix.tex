@@ -1,0 +1,48 @@
+When dealing with a system of linear equations, we can take each expression involving variable terms and define a very nice function with very strong properties.
+
+For example, in the system of linear equations
+\[\begin{cases}
+    2x + 3y -z = 1 & (top) \\
+    x - y +z = -1 & (middle) \\
+    x+2y+2z = 3 & (bottom)
+\end{cases}\]
+
+we can define the function which maps ordered triples to ordered triples, \(f(x,y,z) = ( 2x+3y-z , x-y+z , x+2y+2z ).\) Importantly, the expressions defining \(f\) have \emph{no} constant terms. Then the system of equations is represented by the equation \(f(x,y,z) = (1,-1,3).\) With many variables and many equations, solving the system by substitution becomes impractical. We want to efficiently and algorithmically apply the elimination procedure discussed in the section of systems of linear equations. When carrying out elimination, we are manipulating the coefficients only. Symbolically, the variables only role is keeping the coefficients separate and organized. Thus we represent the functions like the \(f\) above as \emph{matrices}. Which, in the context of solving systems of linear equations, greatly increases notational efficiency.
+
+\begin{definition}
+    A \emph{matrix} is a rectangular array of numbers. The plural is matrices.
+\end{definition}
+
+\begin{example}
+    The following are matrices.
+
+    \[\begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}\]
+
+    \[\begin{bmatrix}
+         1 \\
+        1 \\
+        1
+    \end{bmatrix}\]
+
+    \[\begin{bmatrix}
+        1 & 0 & -1 \\
+        0 & 1 & 1/2
+    \end{bmatrix}\]
+\end{example}
+
+\begin{example}
+    To convert \(f(x,y,z) = ( 2x+3y-z , x-y+z , x+2y+2z )\) into a matrix we take only the coefficients and ensure that the columns are organzied by variable and the rows by equation.
+    \[\begin{matrix}                                &\begin{matrix}x\ & y \ &z\end{matrix}\\
+    \begin{matrix}top\\middle\\bottom\end{matrix}   &\begin{bmatrix}
+        2 & 3 & -1 \\
+        1 & -1 & 1 \\
+        1 & 2 & 2
+    \end{bmatrix}\end{matrix}\]
+    We have borrowed the top, middle, bottom labels from the system of linear equations from which we got \(f.\)
+\end{example}
+
+We usually use uppercase letters (like \(A, \ B, \ C, \ M, \ I\)) for matrices and lowercase letters (like \(x, \ y, \ z, \ a, \ b, \ c\)) for real numbers.

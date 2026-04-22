@@ -1,0 +1,43 @@
+\begin{example}
+    Suppose demand for a product is given by
+    \[p = -\frac{1}{27}q+3\] and supply by
+    \[p = \frac{1}{54}q+1.\]
+    This lines up with expectation as increasing linear functions have positive slope and decreasing linear functions have negative slope. Let's find the total revenue at the equilibrium point.
+
+    \begin{solution}
+        We first need to find the equilibrium point by solving the relevant system of equations. Let's solve this system by substitution. Since each equation is already solved for \(p,\) we will set the two expressions in \(q\) equal to each other.
+        \[-\frac{1}{27}q + 3 = \frac{1}{54}q+1\]
+
+        Solving for \(q\) yields \(q=36.\) Plugging \(36\) into either of the two expressions in \(q\) gives \(p = \frac{5}{3}.\)
+
+        Equilibrium point: \(\left(36, \frac{5}{3}\right).\)
+
+        Recall that total revenue is the price times quantity.
+
+        Total revenue: \(p\cdot q = 36 \cdot \frac{5}{3} = 60.\)
+    \end{solution}
+\end{example}
+
+\begin{example}
+    Suppose supply is given by
+    \[p = \frac{1}{50}q + 5\]
+    and demand by
+    \[ p = \frac{600}{q} + 2.\]
+    Find the equilibrium point.
+
+    \begin{solution}
+        We can operate under the assumption that supply and demand equations will only intersect once on the domain we are considering. This is in part due to the fact that demand is decreasing and supply is increasing. To actually conclude that they intersect once, we make other assumptions about supply and demand curves that touch on calculus concepts. This is a nonlinear system of equations and when considering the largest domain possible, \((-\infty,\infty) - \{0\},\) we would find that there are two solutions. However, these are representing supply and demand curves and negative quantities are not being considered. We throw out any solution with negative quantity.
+
+        We will again solve by substitution.
+
+        \begin{gather*}
+            \frac{1}{50}q + 5 = \frac{600}{q} + 2 \\
+            \frac{1}{50}q^2+3q -600 = 0 \\
+            q^2 + 60q - 30000=0
+        \end{gather*}
+
+        By the quadratic formula, we have \[q = \frac{-60 \pm \sqrt{123600}}{2} = -30\pm10\sqrt{309}.\] Since \(\sqrt{309} > 3,\) \(-30 + 10\sqrt{309} >0\) while \(-30 - 10\sqrt{309}<0.\) We take \(-30 + 10\sqrt{309}\) to be the equilibrium quantity. It is approximately \(113.75.\) Evaluating one of our expressions for \(p\) in terms of \(q\) at \(113.75,\) we get that \(p \approx 7.27.\)
+
+        Equilibrium point: \((113.75, 7.27).\)
+    \end{solution}
+\end{example}
