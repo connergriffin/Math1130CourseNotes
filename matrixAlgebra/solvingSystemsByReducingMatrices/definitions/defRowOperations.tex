@@ -64,56 +64,56 @@ THE ROW OPERATIONS
     \begin{solution}
         We first set up the augmented matrix.
         \[\begin{bmatrix}
-            2 & 1 & -1 & \vline & 1 \\
-            1 & 2 & 2 & \vline & 3 \\
-            0 & 1 & 5 & \vline & 2
+            2 & 1 & -1 & \vert & 1 \\
+            1 & 2 & 2 & \vert & 3 \\
+            0 & 1 & 5 & \vert & 2
         \end{bmatrix}\]
 
         We will let \(R_1, R_2,\) and \(R_3\) be the first, second, and third rows respectively.
         We first go down the columns from left to right making the non leading entries below each leading entry zero. After this we go up the columns from right to left making the necessary entries zero.
 
         \begin{gather*}\overset{R_1/2}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            1 & 2 & 2 & \vline & 3 \\
-            0 & 1 & 5 & \vline & 2
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            1 & 2 & 2 & \vert & 3 \\
+            0 & 1 & 5 & \vert & 2
         \end{bmatrix} \\
         \overset{R_2-R_1}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            0 & 3/2 & 5/2 & \vline & 5/2 \\
-            0 & 1 & 5 & \vline & 2
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            0 & 3/2 & 5/2 & \vert & 5/2 \\
+            0 & 1 & 5 & \vert & 2
         \end{bmatrix}\\
         \overset{2R_2/3}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            0 & 1 & 5/3 & \vline & 5/3 \\
-            0 & 1 & 5 & \vline & 2
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            0 & 1 & 5/3 & \vert & 5/3 \\
+            0 & 1 & 5 & \vert & 2
         \end{bmatrix}\\
         \overset{R_3-R_2}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            0 & 1 & 5/3 & \vline & 5/3 \\
-            0 & 0 & 10/3 & \vline & 1/3
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            0 & 1 & 5/3 & \vert & 5/3 \\
+            0 & 0 & 10/3 & \vert & 1/3
         \end{bmatrix}\\
         \overset{3R_3/10}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            0 & 1 & 5/3 & \vline & 5/3 \\
-            0 & 0 & 1 & \vline & 1/10
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            0 & 1 & 5/3 & \vert & 5/3 \\
+            0 & 0 & 1 & \vert & 1/10
         \end{bmatrix}
         \end{gather*}
         We now have a \(1\) as a leading entry for each row, as well as \(0\)s in all of the entries below each leading entry. We now want to clear out all of the entries above the leading \(1\)s.
         \begin{gather*}
         \overset{R_2 - 5R_3/3}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & -1/2 & \vline & 1/2 \\
-            0 & 1 & 0 & \vline & 3/2 \\
-            0 & 0 & 1 & \vline & 1/10
+            1 & 1/2 & -1/2 & \vert & 1/2 \\
+            0 & 1 & 0 & \vert & 3/2 \\
+            0 & 0 & 1 & \vert & 1/10
         \end{bmatrix}\\
         \overset{R_1 + R_3/2}{\longrightarrow} \begin{bmatrix}
-            1 & 1/2 & 0 & \vline & 11/20 \\
-            0 & 1 & 0 & \vline & 3/2 \\
-            0 & 0 & 1 & \vline & 1/10
+            1 & 1/2 & 0 & \vert & 11/20 \\
+            0 & 1 & 0 & \vert & 3/2 \\
+            0 & 0 & 1 & \vert & 1/10
         \end{bmatrix}\\
         \overset{R_1 + R_3/2}{\longrightarrow} \begin{bmatrix}
-            1 & 0 & 0 & \vline & -1/5 \\
-            0 & 1 & 0 & \vline & 3/2 \\
-            0 & 0 & 1 & \vline & 1/10
+            1 & 0 & 0 & \vert & -1/5 \\
+            0 & 1 & 0 & \vert & 3/2 \\
+            0 & 0 & 1 & \vert & 1/10
         \end{bmatrix}
         \end{gather*}
         Now that we have a reduced matrix, we can now determine the solution to the system of equations by converting this matrix back into a system of linear equations.
@@ -137,26 +137,26 @@ THE ROW OPERATIONS
         This system as an augmented matrix.
 
         \[\begin{bmatrix}
-            2 & 3 & \vline & 5 \\
-            1 & 2 & \vline & 1 \\
-            1 & 5 & \vline & 3
+            2 & 3 & \vert & 5 \\
+            1 & 2 & \vert & 1 \\
+            1 & 5 & \vert & 3
         \end{bmatrix}\]
         We will let \(R_1, R_2,\) and \(R_3\) be the first, second, and third rows respectively.
 
         \begin{gather*}\overset{R_1/2}{\longrightarrow} \begin{bmatrix}
-            1 & 3/2 & \vline & 5/2 \\
-            1 & 2 & \vline & 1 \\
-            1 & 5 & \vline & 3
+            1 & 3/2 & \vert & 5/2 \\
+            1 & 2 & \vert & 1 \\
+            1 & 5 & \vert & 3
         \end{bmatrix} \\
         \overset{R_2-R_1 \ \& \ R_3-R_1}{\longrightarrow} \begin{bmatrix}
-            1 & 3/2 & \vline & 5/2 \\
-            0 & 1/2 &  \vline & -3/2 \\
-            0 & 7/2 &  \vline & 1/2
+            1 & 3/2 & \vert & 5/2 \\
+            0 & 1/2 &  \vert & -3/2 \\
+            0 & 7/2 &  \vert & 1/2
         \end{bmatrix}\\
         \overset{2R_2 \ \& \ 2R_3/7-2R_1}{\longrightarrow} \begin{bmatrix}
-            1 & 3/2 & \vline & 5/2 \\
-            0 & 1 &  \vline & -3 \\
-            0 & 0 &  \vline & 22/7
+            1 & 3/2 & \vert & 5/2 \\
+            0 & 1 &  \vert & -3 \\
+            0 & 0 &  \vert & 22/7
         \end{bmatrix}
         \end{gather*}
         We stop here because we have a leading entry in the last row. Converting this to an equation we get \(0x_1+0x_2 = 22/7.\) There are \emph{no} solutions to this equation and hence there are no solutions to the \emph{entire} system of equations.

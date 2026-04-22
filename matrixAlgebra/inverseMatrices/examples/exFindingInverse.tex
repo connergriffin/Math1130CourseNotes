@@ -1,0 +1,194 @@
+We can find the inverse of a matrix \(A_{n\times n},\) assuming it exists, by reducing the augmented matrix \(\begin{bmatrix}
+    A & \vert & I_{n\times n}
+\end{bmatrix}.\)
+
+When we apply the row operations to this augmented matrix, the matrix on the right side keeps a record of all the operations we have applied. Thus, once we have reduced the matrix if we get \(\begin{bmatrix}
+    I_{n\times n} & \vert & B
+\end{bmatrix}\) it must be that \(B = A^{-1}.\)
+
+\begin{example}
+    Find the inverse of \(\begin{bmatrix}
+        1 & -2 & 3 \\
+        -3 & 1 & 6 \\
+        2 & 3 & 1
+    \end{bmatrix}.\)
+    \begin{solution}
+        We must reduce \[\begin{bmatrix}
+        1 & -2 & 3 & \vert & 1 & 0 & 0\\
+        -3 & 1 & 6 & \vert & 0 & 1 & 0\\
+        2 & 3 & 1 & \vert & 0 & 0 & 1
+    \end{bmatrix}.\]
+    \begin{gather*}
+        \overset{R_2+3R_1 \ \& \ R_3-2R_1}{\longrightarrow} \begin{bmatrix}
+        1 & -2 & 3 & \vert & 1 & 0 & 0\\
+        0 & -5 & 15 & \vert & 3 & 1 & 0\\
+        0 & 7 & -5 & \vert & -2 & 0 & 1
+    \end{bmatrix}\\
+    \overset{-R_2/5}{\longrightarrow} \begin{bmatrix}
+        1 & -2 & 3 & \vert & 1 & 0 & 0\\
+        0 & 1 & -3 & \vert & -3/5 & -1/5 & 0\\
+        0 & 7 & -5 & \vert & -2 & 0 & 1
+    \end{bmatrix}\\
+    \overset{R_3-7R_2}{\longrightarrow} \begin{bmatrix}
+        1 & -2 & 3 & \vert & 1 & 0 & 0\\
+        0 & 1 & -3 & \vert & -3/5 & -1/5 & 0\\
+        0 & 0 & 16 & \vert & 11/5 & 7/5 & 1
+    \end{bmatrix}\\
+    \overset{R_3/16}{\longrightarrow} \begin{bmatrix}
+        1 & -2 & 3 & \vert & 1 & 0 & 0\\
+        0 & 1 & -3 & \vert & -3/5 & -1/5 & 0\\
+        0 & 0 & 1 & \vert & 11/80 & 7/80 & 1/16
+    \end{bmatrix}\\
+    \overset{R_2+3R_3 \ \& \ R_1 - 3R_3}{\longrightarrow} \begin{bmatrix}
+        1 & -2 & 0 & \vert & 47/80 & -21/80 & -3/16\\
+        0 & 1 & 0 & \vert & -3/10 & -1/16 & 3/16\\
+        0 & 0 & 1 & \vert & 11/80 & 7/80 & 1/16
+    \end{bmatrix}\\
+    \overset{R_2+3R_3 \ \& \ R_1 - 3R_3}{\longrightarrow} \begin{bmatrix}
+        1 & 0 & 0 & \vert & 17/80 & -11/80 & 3/16\\
+        0 & 1 & 0 & \vert & -3/10 & -1/16 & 3/16\\
+        0 & 0 & 1 & \vert & 11/80 & 7/80 & 1/16
+    \end{bmatrix}
+    \end{gather*}
+
+    Thus \(A^{-1} = \begin{bmatrix}
+        17/80 & -11/80 & 3/16 \\
+        -3/16 & 1/16 & 3/16 \\
+        11/80 & 7/80 & 1/16
+    \end{bmatrix} = \frac{1}{80}\begin{bmatrix}
+        17 & -11 & 15 \\
+        -15 & 5 & 15 \\
+        11 & 7 & 5
+    \end{bmatrix}.\)
+
+    Let's use the inverse to solve the matrix equations \(Ax = \begin{bmatrix}
+        1 \\ 2\\ 3
+    \end{bmatrix}\) and \(Ax = \begin{bmatrix}
+        12 \\ 15 \\17
+    \end{bmatrix}.\)
+
+    The solutions to the first equation \[x = A^{-1}\begin{bmatrix}
+        1 \\ 2\\ 3
+    \end{bmatrix} = \frac{1}{80}\begin{bmatrix}
+        17 & -11 & 15 \\
+        -15 & 5 & 15 \\
+        11 & 7 & 5
+    \end{bmatrix}\begin{bmatrix}
+        1 \\2 \\3
+    \end{bmatrix} = \begin{bmatrix}
+        1/4 \\ 1/2 \\ 1/2
+    \end{bmatrix}.\]
+
+    The solutions to the second equation \[x = A^{-1}\begin{bmatrix}
+        12 \\ 15\\ 17
+    \end{bmatrix} = \frac{1}{80}\begin{bmatrix}
+        17 & -11 & 15 \\
+        -15 & 5 & 15 \\
+        11 & 7 & 5
+    \end{bmatrix}\begin{bmatrix}
+        12 \\15 \\17
+    \end{bmatrix} = \begin{bmatrix}
+        3.675 \\ -0.9125 \\ 4.025
+    \end{bmatrix}.\]
+    \end{solution}
+\end{example}
+
+We can use this process to solve matrix equations involving matrices which are not invertible, as well. Suppose \(A_{m \times n}\) is not invertible. Then if we reduce the augmented matrix \(\begin{bmatrix}
+    A_{m\times n} & \vert & I_{m\times m}
+\end{bmatrix}\) we will get the matrix \(\begin{bmatrix}
+    R_{m \times n} & \vert & B_{m\times m}
+\end{bmatrix}\) where \(R\) is a reduced matrix. Then \(B\) is exactly the matrix such that \(BA = R.\) If we want to solve the matrix equation \(Ax = C\) Then we can apply \(B\) to both sides of the equation. This gives us  \(Rx = BC.\) Since \(R\) is \emph{not} the identity we will have free variables or zero rows in \(R.\) From \(Rx = BC\) we can find all solutions to the system of equations.
+
+\begin{example}
+    Suppose \(A = \begin{bmatrix}
+        1 & 3 \\
+        1 & 2 \\
+        0 & 1
+    \end{bmatrix}.\) We know that \(A\) is \emph{not} invertible since it is not a square matrix.
+
+    Determine all solutions to the following matrix equations
+    \begin{enumerate}
+        \item \(A \begin{bmatrix}
+            x\\y
+        \end{bmatrix} = \begin{bmatrix}
+            1\\1 \\1
+        \end{bmatrix}\)
+        \item \(A\begin{bmatrix}
+            x\\y
+        \end{bmatrix} = \begin{bmatrix}
+            3\\2\\1
+        \end{bmatrix}\)
+        \item \(A\begin{bmatrix}
+            x\\y
+        \end{bmatrix} = \begin{bmatrix}
+            -2\\-4\\2
+        \end{bmatrix}\)
+    \end{enumerate}
+    \begin{solution}
+        While \(A\) is not invertible we can still find a matrix which when applied to \(A\) produces a reduced matrix. Thus allowing us to quickly reduce augmented matrices.
+
+        We must reduce \[\begin{bmatrix}
+            1 & 3 & \vert & 1 & 0 &0 \\
+            1 & 2 & \vert & 0 & 1 & 0 \\
+            0 & 1 & \vert & 0 & 0 & 1
+        \end{bmatrix}.\]
+
+        \begin{gather*}
+            \overset{R_2 - R_1}{\longrightarrow}\begin{bmatrix}
+            1 & 3 & \vert & 1 & 0 &0 \\
+            0 & -1 & \vert & -1 & 1 & 0 \\
+            0 & 1 & \vert & 0 & 0 & 1
+        \end{bmatrix}\\
+        \overset{R_2 + R_3}{\longrightarrow}\begin{bmatrix}
+            1 & 3 & \vert & 1 & 0 &0 \\
+            0 & 1 & \vert & 0 & 0 & 1 \\
+            0 & 0 & \vert & -1 & 1 & 1
+        \end{bmatrix}\\
+        \overset{R_1 - 3R_2}{\longrightarrow}\begin{bmatrix}
+            1 & 0 & \vert & 1 & 0 &-3 \\
+            0 & 1 & \vert & 0 & 0 & 1 \\
+            0 & 0 & \vert & -1 & 1 & 1
+        \end{bmatrix}
+        \end{gather*}
+        Now that we have a reduced matrix we can use \(B = \begin{bmatrix}
+            1 & 0 &-3 \\
+            0 & 0 & 1 \\
+            -1 & 1 & 1
+        \end{bmatrix}\) to solve the given matrix equations.
+        \[BA\begin{bmatrix}
+            x\\y
+        \end{bmatrix} = B\begin{bmatrix}
+            1\\1 \\1
+        \end{bmatrix} \Rightarrow \begin{bmatrix}
+            1 & 0 \\
+            0 & 1 \\
+            0 & 0
+        \end{bmatrix}\begin{bmatrix}x \\y \end{bmatrix} = \begin{bmatrix}
+            -2 \\ 1 \\ 1
+        \end{bmatrix}.\] This matrix equation has no solution since the last row is gives \(0=1.\)
+
+        \[BA\begin{bmatrix}
+            x\\y
+        \end{bmatrix} = B\begin{bmatrix}
+            3\\2 \\1
+        \end{bmatrix} \Rightarrow \begin{bmatrix}
+            1 & 0 \\
+            0 & 1 \\
+            0 & 0
+        \end{bmatrix}\begin{bmatrix}x \\y \end{bmatrix} = \begin{bmatrix}
+            0 \\ 1 \\ 0
+        \end{bmatrix}.\] Thus we have \(x=0\) and \(y=1\) as the only solution.
+
+        \[BA\begin{bmatrix}
+            x\\y
+        \end{bmatrix} = B\begin{bmatrix}
+            -2\\-4 \\2
+        \end{bmatrix} \Rightarrow \begin{bmatrix}
+            1 & 0 \\
+            0 & 1 \\
+            0 & 0
+        \end{bmatrix}\begin{bmatrix}x \\y \end{bmatrix} = \begin{bmatrix}
+            -8 \\ 2 \\ 0
+        \end{bmatrix}.\] Thus we have \(x=-8\) and \(y=2\) as the only solution.
+    \end{solution}
+\end{example}

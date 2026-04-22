@@ -1,0 +1,15 @@
+We can write systems of linear equations as \emph{matrix equations}.
+
+\begin{definition}
+\[Ax=C\] is a \emph{matrix equation} where we
+    are taking \(A_{m \times n}\) to be some \(m \times n\) matrix, \(x_{n \times 1}\) a column matrix of \emph{variables}, and \(C_{m\times 1}\) some column matrix of \emph{constants}.
+\end{definition}
+
+As an augmented matrix, \(Ax=C\) is \(\begin{bmatrix}
+    A & \vert & C
+\end{bmatrix}.\) If \(A\) is invertible, then we have \(x = A^{-1}C.\) This simply follows from the algebra of matrix multiplication. We can see this happening with the augmented matrix as well.
+\[A^{-1}\begin{bmatrix}
+    A & \vert & C
+\end{bmatrix} = \begin{bmatrix}
+    I_{n\times n} & \vert & A^{-1}C
+\end{bmatrix}.\]
